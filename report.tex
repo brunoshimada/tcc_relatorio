@@ -1,5 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage[english,brazil]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
 
 \title{Relat\'orio - PSG2}
 \author{Bruno Yoshikazu Shimada}
@@ -94,17 +97,34 @@ Ao longo do desenvolvimento do aplicativo, em diversos momentos apareceram d\'uv
 Abaixo est\~ao listadas as fontes consultadas ao longo do trabalho que ajudaram em diversos momentos do desenvolvimento.
 \newline
 
-
-% link do training para android
-No come\c{c}o do projeto meu conhecimento de programa\c{c}\~ao para \textit{Android} era nulo, durante a prepara\c{c}\~ao da m\'aquina encontrei no mesmo site que disponibiliza a \textit{IDE} para desenvolvimento, uma sub-se\c{c}\~ao intitulada \textit{Training}, debaixo da se\c{c}\~ao \textit{Develop}. Nela encontrei uma s\'erie de li\c{c}\~oes b\'asicas para quem est\'a come\c{c}ando a desenvolver para \textit{Android}. Foi \'util para ter uma no\c{c}\~ao b\'asica de onde come\c{c}ar e os termos espec\'ificos usados.
-\newline
-
-
 Para entendimento do conceito de micropagamentos foram usadas duas fontes principais:
 \begin{itemize}
 	%link pagina da investopedia
 \item A p\'agina do termo no site da \textit{Investopedia} que deu uma vis\~ao geral sobre o assunto, enfocando primeiro em um resumo simplificado para depois se aprofundar um pouco mais nele. O interessante desse site \'e que a partir do termo \textit{"micropayment"}, ele busca termos relacionados buscando fazer uma trilha de informa\c{c}\~oes para abranger o assunto.
 %link do livro
 \item A segunda fonte foi o artigo \textbf{\textit{"Virtual currencies, micropaymentes and the payments systems: a challenge to fiat money and monetary policy?"}} Que discorre n\~ao s\'o sobre o conceito de micropagamentos como tamb\'em aborda o tema das moedas virtuais e relaciona ambos. O artigo foca mais na parte de como os micropagamentos s\~ao mais relevantes no mundo online na compra de itens que eles classificam como microprodutos, fazem uma compara\c{c}\~ao das transa\c{c}\~oes online que envolvem produtos f\'isicos e digitais. Esse artigo considero como o principal usado j\'a que ele aborda de uma maneira mais aprofundada o ambiente que os micropagamentos se inserem.
+\end{itemize}
+
+% link do training para android
+No come\c{c}o do projeto meu conhecimento de programa\c{c}\~ao para \textit{Android} era nulo, durante a prepara\c{c}\~ao da m\'aquina encontrei no mesmo site que disponibiliza a \textit{IDE} para desenvolvimento, uma sub-se\c{c}\~ao intitulada \textit{Training}, debaixo da se\c{c}\~ao \textit{Develop}. Nela encontrei uma s\'erie de li\c{c}\~oes b\'asicas para quem est\'a come\c{c}ando a desenvolver para \textit{Android}. Foi \'util para ter uma no\c{c}\~ao b\'asica de onde come\c{c}ar e os termos espec\'ificos usados.
+\newline
+
+Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o guia do site da \textit{Android}, fui atr\'as de mais algum material para criar um aplicativo e aprofundar um pouco mais o conhecimento na plataforma. O livro utilizado nesse momento foi \textbf{\textit{Android 5 Programming by Example}}, o livro se aprofunda um pouco mais nos exerc\'icios ajudando e servindo de guia para criar um aplicativo mais robusto do que o visto no guia do site da \textit{Android}. O livro foi usado de guia no segundo passo do projeto onde criei um aplicativo \textit{mock} que simulava localmente uma transa\c{c}\~ao nos moldes de um micropagamento de um aparelho para um servidor, para testar os conhecimentos e novas t\'ecnincas adquiridas. Apesar do livro focar mais na vers\~ao \textit{Lollipop}, lan\c{c}ada em 2015 mesmo ano da publica\c{c}\~ao do livro, grande parte dos componentes n\~ao mudou muito para a vers\~ao mais atual.
+\newline
+
+
+Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina que foi muita usada como fonte de consulta e guia \'e a \textit{Material Design}. Nela foi poss\'ivel encontrar orienta\c{c}\~oes e guias de como desenhar a interface para se encaixar no padr\~ao do \textit{Material Design}. Dentre as ferramentas e guias dispon\'iveis os que se destacam pelo seu uso e importância no projeto foram as seguintes:
+\begin{itemize}
+	\item \textbf{\textit{Material Icons}} - Uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone que foi usado para simbolizar a a\c{c}\~ao de pagamento:
+	% (inserir \'icone do pagamento)
+	\begin{figure}[h]
+		\centering
+		\includegraphics{pay_action_white}
+		\caption{\'Icone usado para simbolizar a a\c{c}\~ao de pagamento}
+	\end{figure}
+	
+	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no seguinte artigo. \url{<https://material.io/guidelines/style/icons.html#icons-system-icons>}
+	
+	\item \textbf{\textit{Material Colors}} - Uma ferramenta que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e o https://material.io/guidelines/style/color onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
 \end{itemize}
 \end{document}
