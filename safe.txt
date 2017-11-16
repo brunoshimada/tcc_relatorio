@@ -1,0 +1,179 @@
+\documentclass[12pt]{article}
+\usepackage[english,brazil]{babel}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
+\makeatother
+
+\title{Relat\'orio - PSG2}
+\author{Bruno Yoshikazu Shimada}
+\date{Novembro 2017}
+
+\begin{document}
+\maketitle
+
+\newpage
+\selectlanguage{brazil}
+\section*{\centering{Resumo}}
+
+Vivemos em uma \'epoca que a cada dia, novas solu\c{c}\~oes digitais s\~ao lan\c{c}adas para resolver nossos problemas cotidianos de uma maneira simplificada que se incorporam ao nosso cotidiano de uma maneira que ap\'os algum tempo n\~ao conseguimos imaginar como n\'os conseguimos viver sem isso por tanto tempo.
+
+Entre as solu\c{c}\~oes digitais podemos citar por exemplo o ramo econ\^omico e banc\'ario, com desde os b\'asicos aplicativos de bancos para consulta a extratos, pagamentos de boletos, etc, at\'e solu'\c{c}\~oes mais sofisticadas como aplicativos para receber e processar pagamentos por cart\~ao.
+
+Por\'em um problema corriqueiro que temos no dia-a-dia \'e o pagamento de pequenas transa\c{c}\~oes monet\'arias, como tomar um caf\'e na padaria, comprar um chiclete na bomboniere, emprestar uma pequena quantia de dinheiro para um conhecido, entre outras que na maioria das vezes n\~ao passam de 10R\$ e que geram uma perda de tempo de ter que realizar o pagamento com um cart\~ao, digitando a senha pessoal em uma m\'aquina e torcendo para o servi\c{c}o da operadora do cart\~ao estar disponível no momento.
+
+Para resolver esse problema entram em cena os servi\c{c}os de micropagamento, que buscam solucionar o problema de fazer um pagamento ou uma transa\c{c}\~ao de pequeno valor entre duas pessoas, independente de ser pessoa-a-pessoa ou pessoa-a-neg\'ocio, de forma r\'apida, eficaz, segura e descomplicada. O prop\'osito deste trabalho \'e ent\~ao desenvolver um aplicativo Android, SO mais comum entre os usu\'arios de celular no Brasil, que gerencie as transações entre usu\'arios do aplicativo e que fa\c{c}a valer as caracter\'isticas descritas anteriormente.
+\newline
+
+
+
+\textbf{Palavras Chaves}
+\begin{itemize}
+	\item Micropagamentos
+	\item \textit{Android}
+	\item \textit{Fintech}
+\end{itemize}
+\newpage
+\selectlanguage{english}
+\begin{abstract}
+We live in time that everyday new digital solutions are released to solve our daily problems in a simplified manner, that merges into our days that after some time we are unable to imagine how we lived so much time without it.
+
+Among these digital solutions we can mention for example the economic/banking areas, that has the basic bank app for checking account information, payment of tickets, etc.. To more sophisticated apps that receive and process payments by card.
+
+However a common problem we have in our daily lives is the payment of small monetary transactions, such as having a coffee at a bakery, buying gum from a local store, lending money to an acquaintance, among others that in most times don’t surpass 10 BRL and generate a loss of time for having to make the payment with a card, typing our personal password on a machine and hoping the service of the card operator will be available at the moment.
+
+To solve this problem the micropayments services come into play, seeking to solve the problem of making the payment or transaction of a small amount of money between two persons, regardless of being a person-to-person or person-to-business, in a quick, efficient, safe and uncomplicated way. The purpose of this work is to develop an Android app, the most common OS among mobile users in Brazil, that manage transaction between users of the app and enforce the characteristic described before.
+\newline
+
+
+\textbf{Keywords}
+\begin{itemize}
+	\item Micropayments
+	\item Android
+	\item Fintech
+\end{itemize}
+\end{abstract}
+\newpage
+\selectlanguage{brazil}
+\begingroup
+\hypersetup{hidelinks}
+\tableofcontents
+\endgroup
+\newpage
+\selectlanguage{brazil}
+\section{Introdu\c{c}\~ao}
+A defini\c{c}\~ao de micropagamento \'e relativamente simples, se usado uma associa\c{c}\~ao das palavras que a comp\~oem, se infere que se trata de transa\c{c}\~oes cujo valor \'e uma quantia muito pequena. Trazendo para a realidade dele, um micropagamento \'e uma transa\c{c}\~ao online de uma quantia muito pequena de dinheiro (INVESTOPEDIA). Qu\~ao pequeno esse valor \'e, varia entre as diferentes empresas no mercado, o \textit{PayPal}, \textit{e-commerce} que faz a transa\c{c}\~ao de valores digitais entre usu\'arios nas duas pontas, considera um micropagamento qualquer transa\c{c}\~ao cujo valor seja menor do que 10USD (PAYPAL).
+
+A evolu\c{c}\~ao do mercado de  micropagamentos \'e creditada a 3 fatores \textit{(HERNANDEZ - VERME,BENAVIDES;2013)} definidos com base em um relat\'orio de \textit{VASILJEV(2016)} e \textit{BURELLI (2016)}, definem eles como: 
+\begin{itemize}
+	\item O crescimento da infraestrutura de rede e do e-commerce em geral
+	\item O crescimento das redes sociais, jogos online e neg\'ocios de bens digitais
+	\item O aparecimento de novas formas de servi\c{c}os de pagamento online
+\end{itemize}
+Com base nisso podemos ver que as solu\c{c}\~oes atuais para micropagamento surgiram principalmente da necessidade de pagamento de bens para consumo digital como assinaturas de sites, compras de m\'usicas digitais, o melhor exemplo aqui seria o \textit{iTunes} por exemplo.
+Dentre as solu\c{c}\~oes que existem atualmente, a \textit{Investopedia} d\'a foco em dois modelos:
+\begin{itemize}
+	\item A plataforma agindo como carteira digital. Cada usu\'ario cria sua conta na plataforma que ir\'a gerenciar a transa\c{c}\~ao entre dois usu\'arios, a transa\c{c}\~ao \'e efetuada e a plataforma se encarrega de armazenar esse valor, quando a carteira de qualquer uma dessas partes atinge um limite, a quantia total do dinheiro e liberada e transferida para o usu\'ario.
+	\item A plataforma agindo com cr\'editos. Cada usu\'ario cria sua conta no plataforma, cada um deles compra/recarrega a quantia desejada que deseja ter como cr\'edito, a cada transa\c{c}\~ao entre duas partes a plataforma se encarrega de atualizar os cr\'editos de ambas as partes.
+\end{itemize}
+O grande problema na \'area de micropagamentos s\~ao as taxas cobradas pelas operadoras de cart\~ao de cr\'edito, meio que a maioria dos modelos existentes como demonstrado acima usa como forma preferencial de pagamento o cart\~ao cr\'edito, por\'em \'e sabido que para cada transa\c{c}\~ao s\~ao cobradas taxas em cima do valor pago, \'e um caso raro mas podem existir situa\c{c}\~oes que as taxas podem, porque n\~ao, superar o valor da transa\c{c}\~ao, o que para um cliente que seja dono de um neg\'ocio, torna-se algo insustent\'avel.
+\newpage
+\section{Objetivos}
+
+
+\subsection{Objetivo Geral}
+O objetivo do trabalho foi desenvolver um aplicativo \textit{Android} que conseguisse efetuar transa\c{c}\~oes monet\'arias entre duas pessoas usando o celular, com uma interface simples de usar.
+\newline
+
+
+\subsection{Objetivos Espec\'ificos}
+Os objetivos espec\'ificos do trabalho foram:
+\begin{itemize}
+	\item Aprendizagem em programa\c{c}\~ao para \textit{Android}
+	\item Desenvolver a \textit{UI} do aplicativo com base em uma plataforma de servi\c{c}os e infraestrutura existente
+	\item Aprendizagem do conceito de micropagamentos
+\end{itemize}
+\newpage
+\section{Revis\~ao Bibliogr\'afica}
+Ao longo do desenvolvimento do aplicativo, em diversos momentos apareceram d\'uvidas que n\~ao conseguiam ser resolvidas por for\c{c}a bruta, como por exemplo, como definir a posi\c{c}\~ao fixa de um bot\~ao em rela\c{c}\~ao a outros no mesmo layout? D\'uvidas desde as mais simples, que surgem principalmente nos momentos iniciais de aprendizado de alguma linguagem ou \textit{framework} novo, at\'e as mais complexas, quando j\'a se tem uma base s\'olida de conhecimento sobre o t\'opico, s\~ao comuns no meio da tecnologia, fato que pode ser comprovado fazendo uma simples busca no \textit{Google}, nas p\'aginas de resultado \'e comum encontrar pessoas com a mesma d\'uvida, em variados f\'oruns, blogs e  sites diversos. O mais interessante nesse ponto \'e a tamb\'em a variedade de abordagens diferentes que s\~ao poss\'iveis de encontrar para uma mesma d\'uvida, fazendo com que tenhamos que filtrar dentre elas a que melhor se aplica ao contexto do nosso problema.
+
+
+Abaixo est\~ao listadas as fontes consultadas ao longo do trabalho que ajudaram em diversos momentos do desenvolvimento.
+\newline
+
+Para entendimento do conceito de micropagamentos foram usadas duas fontes principais:
+\begin{itemize}
+	%link pagina da investopedia
+\item A p\'agina do termo \cite{invest} no site da \textit{Investopedia} que deu uma vis\~ao geral sobre o assunto, enfocando primeiro em um resumo simplificado para depois se aprofundar um pouco mais nele. O interessante desse site \'e que a partir do termo \textit{"micropayment"}, ele busca termos relacionados buscando fazer uma trilha de informa\c{c}\~oes para abranger o assunto.
+%link do livro
+\item A segunda fonte foi o artigo \textbf{\textit{"Virtual currencies, micropaymentes and the payments systems: a challenge to fiat money and monetary policy?"}} \cite{microp} que discorre n\~ao s\'o sobre o conceito de micropagamentos como tamb\'em aborda o tema das moedas virtuais e relaciona ambos. O artigo foca mais na parte de como os micropagamentos s\~ao mais relevantes no mundo online na compra de itens que eles classificam como microprodutos, fazem uma compara\c{c}\~ao das transa\c{c}\~oes online que envolvem produtos f\'isicos e digitais. Esse artigo considero como o principal usado j\'a que ele aborda de uma maneira mais aprofundada o ambiente que os micropagamentos se inserem.
+\end{itemize}
+
+% link do training para android
+No come\c{c}o do projeto meu conhecimento de programa\c{c}\~ao para \textit{Android} era nulo, durante a prepara\c{c}\~ao da m\'aquina encontrei no mesmo site que disponibiliza a \textit{IDE} para desenvolvimento, uma sub-se\c{c}\~ao intitulada \textit{Training}, debaixo da se\c{c}\~ao \textit{Develop} \cite{anddev}. Nela encontrei uma s\'erie de li\c{c}\~oes b\'asicas para quem est\'a come\c{c}ando a desenvolver para \textit{Android}. Foi \'util para ter uma no\c{c}\~ao b\'asica de onde come\c{c}ar e os termos espec\'ificos usados.
+\newline
+
+Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o guia do site da \textit{Android}, fui atr\'as de mais algum material para criar um aplicativo e aprofundar um pouco mais o conhecimento na plataforma. O livro \cite{andppe} utilizado nesse momento foi \textbf{\textit{"Android 5 Programming by Example"}}, o livro \cite{andppe} se aprofunda um pouco mais nos exerc\'icios ajudando e servindo de guia para criar um aplicativo mais robusto do que o visto no guia do site da \textit{Android}. O livro \cite{andppe} foi usado de guia no segundo passo do projeto onde criei um aplicativo \textit{mock} que simulava localmente uma transa\c{c}\~ao nos moldes de um micropagamento de um aparelho para um servidor, para testar os conhecimentos e novas t\'ecnincas adquiridas. Apesar do livro \cite{andppe} focar mais na vers\~ao \textit{Lollipop}, lan\c{c}ada em 2015 mesmo ano da publica\c{c}\~ao do livro, grande parte dos componentes n\~ao mudou muito para a vers\~ao mais atual.
+\newline
+
+
+Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina \cite{,material} que foi muita usada como fonte de consulta e guia \'e a \textit{Material Design}. Nela foi poss\'ivel encontrar orienta\c{c}\~oes e guias de como desenhar a interface para se encaixar no padr\~ao do \textit{Material Design}. Dentre as ferramentas e guias dispon\'iveis os que se destacam pelo seu uso e importância no projeto foram as seguintes:
+\begin{itemize}
+	\item \textbf{\textit{Material Icons}} - Uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone que foi usado para simbolizar a a\c{c}\~ao de pagamento:
+	% (inserir \'icone do pagamento)
+	\begin{figure}[h]
+		\centering
+		\includegraphics{pay_action_white}
+		\caption{\'Icone usado para simbolizar a a\c{c}\~ao de pagamento}
+	\end{figure}
+	
+	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no artigo \textbf{\textit{Style - Icons}}
+	%\url{<https://material.io/guidelines/style/icons.html#icons-system-icons>}
+	
+	\item \textbf{\textit{Material Colors}} - Uma ferramenta que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e \textbf{\textit{Style - Colors}} onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
+	%https://material.io/guidelines/style/color
+\end{itemize}
+\newpage
+\section{Metodologia}
+Desenvolver a interface de um aplicativo \textit{Android} com base numa plataforma de servi\c{c}os existentes buscando fazer a mesma ser simples, no sentido de ter uma f\'acil utiliza\c{c}\~ao, buscando obedecer e seguir os guias definidos pelo \textit{Android} como boas pr\'aticas e que atendem e se adequam a filosofia do \textit{Material Design}.
+
+As linguagens utilizadas no projeto foram:
+\begin{itemize}
+	\item \textbf{\textit{XML}}: todas as interfaces do \textit{Android} s\~ao escritas usando a linguagem de marca\c{c}\~ao \textit{XML}, o \textit{Android} usa um conjunto de elementos e atributos pr\'oprios na marca\c{c}\~ao como por exemplo o elemento \textit{\textless{RelativeLayout}\textgreater} e o atributo \textit{android:layout\_width}. \textit{XML} tamb\'em usado para definir \textit{Strings}, o tema base, e qualquer outro elemento visual que possa ser reaproveitado, como por exemplo um \textit{layout} customizado para um bot\~ao. Tamb\'em \'e usado para definir o manifesto do aplicativo, onde s\~ao declaradas configur\~a\c{c}\~oes espec\'ificas do aplicativo, como por exemplo permiss\~ao para uso de \textit{bluetooth}, \textit{internet}, etc.
+	\item \textbf{\textit{Java}}: A parte do \textit{back-end} que controla a aplica\c{c}\~ao \'e toda codificada em \textit{Java}. O \textit{Android} usa \textit{Java} para por exemplo codificar um \textit{listener} que capta quando o usu\'ario clica em algum bot\~ao por exemplo, para fazer a troca de interfaces, controle de sess\~ao, carregar \textit{Strings} dinâmicas na interface, tratamento de erros e exce\c{c}\~oes, etc.
+\end{itemize}
+
+Quanto a \textit{hardware} foram usados um \textit{notebook} pr\'oprio rodando um SO \textit{Debian}, e dois aparelhos celulares pr\'oprios com SO \textit{Android} para simular o comportamento de dois usu\'arios. Devido a diferen\c{c}a de SO de ambos, foi interessante observar como a interface se comportava em cada um deles. A t\'itulo de curiosidade seguem as especifica\c{c}\~oes:
+\begin{itemize}
+	\item \textit{Notebook}
+	\begin{itemize}
+		\item SO: \textit{Ubuntu 16.04 LTS - 64-bit}
+		\item Mem\'oria RAM: 8GB
+		\item Processador: \textit{Intel\textregistered Core\textsuperscript{TM} i7-5500U CPU @ 2.40GHz x 4}
+		\item Processador gr\'afico: \textit{Intel\textregistered HD Graphics 5500 (Broadwell GT2)}
+	\end{itemize}
+	\item Celular \textit{Motorola Moto G} 3\textsuperscript{\underline{a}} Gera\c{c}\~ao
+	\begin{itemize}
+		\item SO: \textit{Android 5.1 Lollipop}
+		\item Mem\'oria RAM: 1GB
+		\item Processador: \textit{Qualcomm Snapdragon 410}
+	\end{itemize}
+	\item Celular \textit{Samsung S3 Mini}
+	\begin{itemize}
+		\item SO: \textit{Android 4.1 Jellybean}
+		\item Mem\'oria RAM: 1GB
+		\item Processador: \textit{Dual-core, 1000 MHz}
+	\end{itemize}
+\end{itemize}
+%Final do doc
+\newpage
+\section*{Refer\^encias Bibliogr\'aficas}
+\addcontentsline{toc}{section}{Refer\^encias Bibliogr\'aficas}
+\renewcommand\refname{}
+\bibliography{helper}
+\bibliographystyle{unsrt}
+\end{document}
