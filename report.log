@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.11)  15 NOV 2017 17:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.11)  16 NOV 2017 01:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -187,22 +187,22 @@ File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 ) (./report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 \AtBeginShipoutBox=\box26
-Package hyperref Info: Link coloring OFF on input line 11.
+Package hyperref Info: Link coloring OFF on input line 15.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -211,9 +211,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count99
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 15.
+LaTeX Info: Redefining \pageref on input line 15.
+LaTeX Info: Redefining \nameref on input line 15.
 
 (./report.out) (./report.out)
 \@outlinefile=\write3
@@ -249,22 +249,17 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 13.
+(Font)              <14.4> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <7> on input line 17.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 14.
+(babel)             in language append on input line 18.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 14.
+(babel)             in language append on input line 18.
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (37.07335pt too wide) in paragraph at lines 20--21
-[]\OT1/cmr/m/n/12 Entre as solu^^Xc~oes di-gi-tais po-de-mos ci-tar por exem-pl
-o o ramo econ^omico/banc^^Sario,
- []
-
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ­ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -272,151 +267,173 @@ Missing character: There is no § in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no µ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
+Underfull \hbox (badness 10000) in paragraph at lines 28--30
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 31.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 31.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 35.
+(babel)             in language append on input line 39.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 35.
+(babel)             in language append on input line 39.
  [2]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--46
+Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
 [3] (./report.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 8.
+(Font)              <12> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 8.
+(Font)              <8> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 8.
+(Font)              <6> on input line 6.
 )
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 58.
+(babel)             in language append on input line 65.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 58.
+(babel)             in language append on input line 65.
  [4]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 60.
-
-Overfull \hbox (48.68758pt too wide) in paragraph at lines 63--64
-[]\OT1/cmr/m/n/12 A evolu^^Xc~ao do mer-cado de mi-cro-pa-ga-men-tos ^^Se cre-d
-i-tada a 3 fa-to-res \OT1/cmr/m/it/12 (HERNANDEZ-
- []
-
+(babel)             in language append on input line 67.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 76.
+(babel)             in language append on input line 83.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 76.
-[5]
+(babel)             in language append on input line 83.
+ [5]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 76.
+(babel)             in language append on input line 83.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 76.
+(babel)             in language append on input line 83.
  [6]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 77.
+(babel)             in language append on input line 84.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 80.
+(babel)             in language append on input line 87.
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--83
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 85.
-Package babel Info: Redefining portuges shorthand "|
 (babel)             in language append on input line 92.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 92.
+(babel)             in language append on input line 99.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 99.
 [7]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 93.
+(babel)             in language append on input line 100.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--99
+Underfull \hbox (badness 10000) in paragraph at lines 104--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+Underfull \hbox (badness 10000) in paragraph at lines 116--118
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 111.
+(babel)             in language append on input line 118.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 111.
+(babel)             in language append on input line 118.
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 112--114
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
 
  []
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¢ in font cmr12!
-<images/pay_action_white.png, id=73, 36.135pt x 36.135pt>
+<images/pay_action_white.png, id=78, 36.135pt x 36.135pt>
 File: images/pay_action_white.png Graphic file (type png)
 
 <use images/pay_action_white.png>
-Package pdftex.def Info: images/pay_action_white.png used on input line 122.
+Package pdftex.def Info: images/pay_action_white.png used on input line 129.
 (pdftex.def)             Requested size: 36.13489pt x 36.13489pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 127.
+(babel)             in language append on input line 135.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 127.
+(babel)             in language append on input line 135.
  [9 <./images/pay_action_white.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 130.
+(babel)             in language append on input line 139.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 130.
+(babel)             in language append on input line 139.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 140.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 145.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 145.
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 158.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 162.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 162.
+ [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 171.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 171.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 171.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 171.
 
 (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 171.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 171.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 1BB869BDBCD9475D3655ADAB2E1A4EBC;293.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
+(rerunfilecheck)             Checksum: 02D868E24984413FBF781BE6A86C03B9;339.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 171.
  ) 
 Here is how much of TeX's memory you used:
- 5562 strings out of 494929
- 81725 string characters out of 6180141
- 166740 words of memory out of 5000000
- 8802 multiletter control sequences out of 15000+600000
- 10548 words of font info for 37 fonts, out of 8000000 for 9000
+ 5589 strings out of 494929
+ 82143 string characters out of 6180141
+ 166699 words of memory out of 5000000
+ 8823 multiletter control sequences out of 15000+600000
+ 10731 words of font info for 37 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 29i,6n,32p,1001b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,6n,32p,1001b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (10 pages, 134864 bytes).
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti8.pfb>
+Output written on report.pdf (12 pages, 158187 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
- 19 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
+ 22 named destinations out of 1000 (max. 500000)
+ 54 words of extra memory for PDF output out of 10000 (max. 10000000)
 

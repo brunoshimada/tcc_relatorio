@@ -4,6 +4,10 @@
 \usepackage{graphicx}
 \graphicspath{ {images/} }
 
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
+\makeatother
+
 \title{Relat\'orio - PSG2}
 \author{Bruno Yoshikazu Shimada}
 \date{Novembro 2017}
@@ -17,7 +21,7 @@
 
 Vivemos em uma \'epoca que a cada dia, novas solu\c{c}\~oes digitais s\~ao lan\c{c}adas para resolver nossos problemas cotidianos de uma maneira simplificada que se incorporam ao nosso cotidiano de uma maneira que ap\'os algum tempo n\~ao conseguimos imaginar como n\'os conseguimos viver sem isso por tanto tempo.
 
-Entre as solu\c{c}\~oes digitais podemos citar por exemplo o ramo econ\^omico/banc\'ario, com desde os b\'asicos aplicativos de bancos para consulta a extratos, pagamentos de boletos, etc, at\'e solu'\c{c}\~oes mais sofisticadas como aplicativos para receber e processar pagamentos por cart\~ao.
+Entre as solu\c{c}\~oes digitais podemos citar por exemplo o ramo econ\^omico e banc\'ario, com desde os b\'asicos aplicativos de bancos para consulta a extratos, pagamentos de boletos, etc, at\'e solu'\c{c}\~oes mais sofisticadas como aplicativos para receber e processar pagamentos por cart\~ao.
 
 Por\'em um problema corriqueiro que temos no dia-a-dia \'e o pagamento de pequenas transa\c{c}\~oes monet\'arias, como tomar um caf\'e na padaria, comprar um chiclete na bomboniere, emprestar uma pequena quantia de dinheiro para um conhecido, entre outras que na maioria das vezes n\~ao passam de 10R\$ e que geram uma perda de tempo de ter que realizar o pagamento com um cart\~ao, digitando a senha pessoal em uma m\'aquina e torcendo para o servi\c{c}o da operadora do cart\~ao estar disponível no momento.
 
@@ -54,13 +58,16 @@ To solve this problem the micropayments services come into play, seeking to solv
 \end{abstract}
 \newpage
 \selectlanguage{brazil}
+\begingroup
+\hypersetup{hidelinks}
 \tableofcontents
+\endgroup
 \newpage
 \selectlanguage{brazil}
 \section{Introdu\c{c}\~ao}
 A defini\c{c}\~ao de micropagamento \'e relativamente simples, se usado uma associa\c{c}\~ao das palavras que a comp\~oem, se infere que se trata de transa\c{c}\~oes cujo valor \'e uma quantia muito pequena. Trazendo para a realidade dele, um micropagamento \'e uma transa\c{c}\~ao online de uma quantia muito pequena de dinheiro (INVESTOPEDIA). Qu\~ao pequeno esse valor \'e, varia entre as diferentes empresas no mercado, o \textit{PayPal}, \textit{e-commerce} que faz a transa\c{c}\~ao de valores digitais entre usu\'arios nas duas pontas, considera um micropagamento qualquer transa\c{c}\~ao cujo valor seja menor do que 10USD (PAYPAL).
 
-A evolu\c{c}\~ao do mercado de  micropagamentos \'e creditada a 3 fatores \textit{(HERNANDEZ-VERME,BENAVIDES;2013)} definidos com base em um relat\'orio de \textit{VASILJEV(2016)} e \textit{BURELLI (2016)}, definem eles como: 
+A evolu\c{c}\~ao do mercado de  micropagamentos \'e creditada a 3 fatores \textit{(HERNANDEZ - VERME,BENAVIDES;2013)} definidos com base em um relat\'orio de \textit{VASILJEV(2016)} e \textit{BURELLI (2016)}, definem eles como: 
 \begin{itemize}
 	\item O crescimento da infraestrutura de rede e do e-commerce em geral
 	\item O crescimento das redes sociais, jogos online e neg\'ocios de bens digitais
@@ -109,7 +116,7 @@ Para entendimento do conceito de micropagamentos foram usadas duas fontes princi
 No come\c{c}o do projeto meu conhecimento de programa\c{c}\~ao para \textit{Android} era nulo, durante a prepara\c{c}\~ao da m\'aquina encontrei no mesmo site que disponibiliza a \textit{IDE} para desenvolvimento, uma sub-se\c{c}\~ao intitulada \textit{Training}, debaixo da se\c{c}\~ao \textit{Develop}. Nela encontrei uma s\'erie de li\c{c}\~oes b\'asicas para quem est\'a come\c{c}ando a desenvolver para \textit{Android}. Foi \'util para ter uma no\c{c}\~ao b\'asica de onde come\c{c}ar e os termos espec\'ificos usados.
 \newline
 
-Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o guia do site da \textit{Android}, fui atr\'as de mais algum material para criar um aplicativo e aprofundar um pouco mais o conhecimento na plataforma. O livro utilizado nesse momento foi \textbf{\textit{Android 5 Programming by Example}}, o livro se aprofunda um pouco mais nos exerc\'icios ajudando e servindo de guia para criar um aplicativo mais robusto do que o visto no guia do site da \textit{Android}. O livro foi usado de guia no segundo passo do projeto onde criei um aplicativo \textit{mock} que simulava localmente uma transa\c{c}\~ao nos moldes de um micropagamento de um aparelho para um servidor, para testar os conhecimentos e novas t\'ecnincas adquiridas. Apesar do livro focar mais na vers\~ao \textit{Lollipop}, lan\c{c}ada em 2015 mesmo ano da publica\c{c}\~ao do livro, grande parte dos componentes n\~ao mudou muito para a vers\~ao mais atual.
+Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o guia do site da \textit{Android}, fui atr\'as de mais algum material para criar um aplicativo e aprofundar um pouco mais o conhecimento na plataforma. O livro utilizado nesse momento foi \textbf{\textit{"Android 5 Programming by Example"}}, o livro se aprofunda um pouco mais nos exerc\'icios ajudando e servindo de guia para criar um aplicativo mais robusto do que o visto no guia do site da \textit{Android}. O livro foi usado de guia no segundo passo do projeto onde criei um aplicativo \textit{mock} que simulava localmente uma transa\c{c}\~ao nos moldes de um micropagamento de um aparelho para um servidor, para testar os conhecimentos e novas t\'ecnincas adquiridas. Apesar do livro focar mais na vers\~ao \textit{Lollipop}, lan\c{c}ada em 2015 mesmo ano da publica\c{c}\~ao do livro, grande parte dos componentes n\~ao mudou muito para a vers\~ao mais atual.
 \newline
 
 
@@ -123,8 +130,42 @@ Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina
 		\caption{\'Icone usado para simbolizar a a\c{c}\~ao de pagamento}
 	\end{figure}
 	
-	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no seguinte artigo. \url{<https://material.io/guidelines/style/icons.html#icons-system-icons>}
+	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no artigo \textbf{\textit{Style - Icons}}
+	%\url{<https://material.io/guidelines/style/icons.html#icons-system-icons>}
 	
-	\item \textbf{\textit{Material Colors}} - Uma ferramenta que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e o https://material.io/guidelines/style/color onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
+	\item \textbf{\textit{Material Colors}} - Uma ferramenta que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e \textbf{\textit{Style - Colors}} onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
+	%https://material.io/guidelines/style/color
 \end{itemize}
+\newpage
+\section{Metodologia}
+Desenvolver a interface de um aplicativo \textit{Android} com base numa plataforma de servi\c{c}os existentes buscando fazer a mesma ser simples, no sentido de ter uma f\'acil utiliza\c{c}\~ao, buscando obedecer e seguir os guias definidos pelo \textit{Android} como boas pr\'aticas e que atendem e se adequam a filosofia do \textit{Material Design}.
+
+As linguagens utilizadas no projeto foram:
+\begin{itemize}
+	\item \textbf{\textit{XML}}: todas as interfaces do \textit{Android} s\~ao escritas usando a linguagem de marca\c{c}\~ao \textit{XML}, o \textit{Android} usa um conjunto de elementos e atributos pr\'oprios na marca\c{c}\~ao como por exemplo o elemento \textit{\textless{RelativeLayout}\textgreater} e o atributo \textit{android:layout\_width}. \textit{XML} tamb\'em usado para definir \textit{Strings}, o tema base, e qualquer outro elemento visual que possa ser reaproveitado, como por exemplo um \textit{layout} customizado para um bot\~ao. Tamb\'em \'e usado para definir o manifesto do aplicativo, onde s\~ao declaradas configur\~a\c{c}\~oes espec\'ificas do aplicativo, como por exemplo permiss\~ao para uso de \textit{bluetooth}, \textit{internet}, etc.
+	\item \textbf{\textit{Java}}: A parte do \textit{back-end} que controla a aplica\c{c}\~ao \'e toda codificada em \textit{Java}. O \textit{Android} usa \textit{Java} para por exemplo codificar um \textit{listener} que capta quando o usu\'ario clica em algum bot\~ao por exemplo, para fazer a troca de interfaces, controle de sess\~ao, carregar \textit{Strings} dinâmicas na interface, tratamento de erros e exce\c{c}\~oes, etc.
+\end{itemize}
+
+Quanto a \textit{hardware} foram usados um \textit{notebook} pr\'oprio rodando um SO \textit{Debian}, e dois aparelhos celulares pr\'oprios com SO \textit{Android} para simular o comportamento de dois usu\'arios. Devido a diferen\c{c}a de SO de ambos, foi interessante observar como a interface se comportava em cada um deles. A t\'itulo de curiosidade seguem as especifica\c{c}\~oes:
+\begin{itemize}
+	\item \textit{Notebook}
+	\begin{itemize}
+		\item SO: \textit{Ubuntu 16.04 LTS - 64-bit}
+		\item Mem\'oria RAM: 8GB
+		\item Processador: \textit{Intel\textregistered Core\textsuperscript{TM} i7-5500U CPU @ 2.40GHz x 4}
+		\item Processador gr\'afico: \textit{Intel\textregistered HD Graphics 5500 (Broadwell GT2)}
+	\end{itemize}
+	\item Celular \textit{Motorola Moto G} 3\textsuperscript{\underline{a}} Gera\c{c}\~ao
+	\begin{itemize}
+		\item SO: \textit{Android 5.1 Lollipop}
+		\item Mem\'oria RAM: 1GB
+		\item Processador: \textit{Qualcomm Snapdragon 410}
+	\end{itemize}
+	\item Celular \textit{Samsung S3 Mini}
+	\begin{itemize}
+		\item SO: \textit{Android 4.1 Jellybean}
+		\item Mem\'oria RAM: 1GB
+		\item Processador: \textit{Dual-core, 1000 MHz}
+	\end{itemize}
+\end{itemize} 
 \end{document}
