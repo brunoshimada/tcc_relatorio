@@ -3,7 +3,16 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
+\linespread{1.3}
 
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	top=30mm,
+	left=30mm,
+	right=20mm,
+	bottom=20mm
+}
 
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
@@ -123,12 +132,13 @@ Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o
 
 Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina \cite{material} que foi muita usada como fonte de consulta e guia \'e a \textit{Material Design}. Nela foi poss\'ivel encontrar orienta\c{c}\~oes e guias de como desenhar a interface para se encaixar no padr\~ao do \textit{Material Design}. Dentre as ferramentas e guias dispon\'iveis os que se destacam pelo seu uso e importância no projeto foram as seguintes:
 \begin{itemize}
-	\item \textbf{\textit{Material Icons}} \cite{materialicon} - Uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone que foi usado para simbolizar a a\c{c}\~ao de pagamento:
+	\item \textbf{\textit{Material Icons}} \cite{materialicon} - Uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone da figura \ref{icon_pay} que foi usado para simbolizar a a\c{c}\~ao de pagamento:
 	% (inserir \'icone do pagamento)
 	\begin{figure}[h]
 		\centering
 		\includegraphics{pay_action_white}
 		\caption{\'Icone usado para simbolizar a a\c{c}\~ao de pagamento}
+		\label{icon_pay}
 	\end{figure}
 	
 	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no artigo \textbf{\textit{Style - Icons}} \cite{materialiconguide}
