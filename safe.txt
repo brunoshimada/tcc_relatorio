@@ -1,21 +1,88 @@
-\documentclass[12pt]{article}
+\documentclass[hidelinks,12pt]{article}
 \usepackage[english,brazil]{babel}
 \usepackage{hyperref}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
+\linespread{1.3}
 
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	top=30mm,
+	left=30mm,
+	right=20mm,
+	bottom=20mm
+}
 
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
 \makeatother
-
-\title{Relat\'orio - PSG2}
 \author{Bruno Yoshikazu Shimada}
+\title{\textbf{Desenvolvimento de aplicativo Android paara Micropagamentos}
+	}
 \date{Novembro 2017}
 
 \begin{document}
-\maketitle
-
+\begin{titlepage}
+	\centering
+	{\Large Universidade de S\~ao Paulo\par}
+	{\Large Escola de Artes, Ci\^encias e Humanidades\par}
+	\vfill
+	{\Large Bruno Yoshikazu Shimada\par}
+	\vspace{1cm}
+	{\Large\bfseries Desenvolvimento de aplicativo para micropagamentos na plataforma Android\par}
+	\vfill
+	{\Large S\~ao Paulo\par}
+	{\Large 2017\par}
+\end{titlepage}
+\newpage
+\begin{titlepage}
+	\centering
+	{\Large Bruno Yoshikazu Shimada\par}
+	\vspace{2cm}
+	{\Large\bfseries Desenvolvimento de aplicativo para micropagamentos na plataforma Android\par}
+	\vfill
+	\begin{flushright}
+		Relat\'orio parcial apresentado \`a Escola de Artes, Ci\^encias e Humanidades, da Universidade de S\~ao Paulo, como parte dos requisitos exigidos na disciplina ACH 2018 - Projeto Supervisionado ou de Gradua\c{c}\~ao II, para obten\c{c}\~ao do t\'itulo de Bacharel em Sistemas de Informa\c{c}\~ao.
+		
+		\bfseries Orientador: Prof. Dr. Luciano Vieira de Ara\'ujo
+	\end{flushright}
+	\vspace{2cm}
+	{\Large S\~ao Paulo\par}
+	{\Large 2017\par}
+\end{titlepage}
+\newpage
+\begin{titlepage}
+	\begin{flushleft}
+		{\Large Nome: SHIMADA, Bruno Yoshikazu \par}
+		{\Large T\'itulo: Desenvolvimento de aplicativo para micropagamentos na plataforma Android \par}
+	\end{flushleft}
+	\begin{flushright}
+		Relat\'orio parcial apresentado \`a Escola de Artes, Ci\^encias e Humanidades, da Universidade de S\~ao Paulo, como parte dos requisitos exigidos na disciplina ACH 2018 - Projeto Supervisionado ou de Gradua\c{c}\~ao II, para obten\c{c}\~ao do t\'itulo de Bacharel em Sistemas de Informa\c{c}\~ao.
+	\end{flushright}
+	\vspace{1cm}
+	\begin{flushleft}
+		{\Large Aprovado em: \rule{1cm}{1pt}/\rule{1cm}{1pt}/\rule{2cm}{1pt} \par}
+	\end{flushleft}
+	\vfill
+	\centering
+		{\Large Banca Examinadora \par}
+		\vspace{1cm}
+		\begin{flushleft}
+			{\Large Prof. Dr:\rule{5cm}{1pt}    Institui\c{c}\~ao:\rule{5cm}{1pt}\par}
+			{\Large Julgamento:\rule{4,2cm}{1pt} Assinatura:\rule{5cm}{1pt}\par}
+			\vspace{1cm}
+			{\Large Prof. Dr:\rule{5cm}{1pt}    Institui\c{c}\~ao:\rule{5cm}{1pt}\par}
+			{\Large Julgamento:\rule{4,2cm}{1pt} Assinatura:\rule{5cm}{1pt}\par}
+			\vspace{1cm}
+			{\Large Prof. Dr:\rule{5cm}{1pt}    Institui\c{c}\~ao:\rule{5cm}{1pt}\par}
+			{\Large Julgamento:\rule{4,2cm}{1pt} Assinatura:\rule{5cm}{1pt}\par}
+		\end{flushleft}
+\end{titlepage}
+\newpage
+\selectlanguage{brazil}
+\section*{\centering{Agradecimentos}}
+section
 \newpage
 \selectlanguage{brazil}
 \section*{\centering{Resumo}}
@@ -57,6 +124,12 @@ To solve this problem the micropayments services come into play, seeking to solv
 	\item Fintech
 \end{itemize}
 \end{abstract}
+\newpage
+\selectlanguage{brazil}
+\begingroup
+\centering
+\listoffigures
+\endgroup
 \newpage
 \selectlanguage{brazil}
 \begingroup
@@ -121,21 +194,20 @@ Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o
 \newline
 
 
-Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina \cite{,material} que foi muita usada como fonte de consulta e guia \'e a \textit{Material Design}. Nela foi poss\'ivel encontrar orienta\c{c}\~oes e guias de como desenhar a interface para se encaixar no padr\~ao do \textit{Material Design}. Dentre as ferramentas e guias dispon\'iveis os que se destacam pelo seu uso e importância no projeto foram as seguintes:
+Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina \cite{material} que foi muita usada como fonte de consulta e guia \'e a \textit{Material Design}. Nela foi poss\'ivel encontrar orienta\c{c}\~oes e guias de como desenhar a interface para se encaixar no padr\~ao do \textit{Material Design}. Dentre as ferramentas e guias dispon\'iveis os que se destacam pelo seu uso e importância no projeto foram as seguintes:
 \begin{itemize}
-	\item \textbf{\textit{Material Icons}} - Uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone que foi usado para simbolizar a a\c{c}\~ao de pagamento:
+	\item \textbf{\textit{Material Icons}} \cite{materialicon} - Uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone da figura \ref{icon_pay} que foi usado para simbolizar a a\c{c}\~ao de pagamento:
 	% (inserir \'icone do pagamento)
 	\begin{figure}[h]
 		\centering
 		\includegraphics{pay_action_white}
 		\caption{\'Icone usado para simbolizar a a\c{c}\~ao de pagamento}
+		\label{icon_pay}
 	\end{figure}
 	
-	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no artigo \textbf{\textit{Style - Icons}}
-	%\url{<https://material.io/guidelines/style/icons.html#icons-system-icons>}
+	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no artigo \textbf{\textit{Style - Icons}} \cite{materialiconguide}
 	
-	\item \textbf{\textit{Material Colors}} - Uma ferramenta que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e \textbf{\textit{Style - Colors}} onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
-	%https://material.io/guidelines/style/color
+	\item \textbf{\textit{Material Colors}} \cite{materialcolors} - Uma ferramenta \cite{materialcolorpallete} que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e \textbf{\textit{Style - Colors}} \cite{materialcolors} onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
 \end{itemize}
 \newpage
 \section{Metodologia}
@@ -176,4 +248,6 @@ Quanto a \textit{hardware} foram usados um \textit{notebook} pr\'oprio rodando u
 \renewcommand\refname{}
 \bibliography{helper}
 \bibliographystyle{unsrt}
-\end{document}
+\end{document}\begin{equation}
+
+\end{equation}
