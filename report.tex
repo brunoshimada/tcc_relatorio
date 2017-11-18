@@ -14,6 +14,9 @@
 	bottom=20mm
 }
 
+\usepackage{float}
+\usepackage{subcaption}
+
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
 \makeatother
@@ -241,6 +244,38 @@ Quanto a \textit{hardware} foram usados um \textit{notebook} pr\'oprio rodando u
 		\item Processador: \textit{Dual-core, 1000 MHz}
 	\end{itemize}
 \end{itemize}
+\newpage
+\section{Resultados}
+Para melhor entendimento dos resultados, os mesmos v\~ao ser divididos em duas se\c{c}\~oes. A primeira com os resultados do aprendizado em desenvolvimento para \textit{Android}, onde v\~ao ser apresentados as dificuldades iniciais, dúvidas que surgiram e o aplicativo \textit{mock} desenvolvido que simulava uma transa\c{c}\~ao de micropagamento. Na segunda se\c{c}\~ao ser\'a descrito o desenvolvimento em si do aplicativo final, usando j\'a a platforma de servi\c{c}os.
+
+\subsection{Aprendizado em desenvolvimento para \textit{Android}}
+Um dos objetivos espec\'ificos para esse projeto era aprender desenvolvimento para a plataforma \textit{Android}. At\'e o in\'icio do projeto eu nunca havia tido contato com o desenvolvimento para \textit{Android}, ent\~ao o primeiro passo foi ir atr\'as de material sobre o mesmo, o ponto inicial para isso assumi que seria o site oficial da plataforma, isso por experiências passadas de estudo onde a p\'agina de alguma linguagem, \textit{framework}, etc, em grande partes dos casos possuia uma boa documenta\c{c}\~ao sobre a mesma. A p\'agina da plataforma do \textit{Android} felizmente seguia essa linha, e na mesma encontrei as informa\c{c}\~oes necess\'arias para dar in\'icio no aprendizado.
+
+Ap\'os a configura\c{c}\~ao do ambiente, instalando \textit{Java} e a \textit{IDE} apenas, segui o tutorial \cite{androidhw} que explica como criar um aplicativo b\'asico (imagem \ref{hw}) para testar as configura\c{c}\~oes locais. O resultado \'e um aplicativo com duas \textit{Activities} (interfaces), a primeira (imagem \ref*{hw_message}) possui uma \textit{EditText} para escrever uma mensagem e um bot\~ao que chama a pr\'oxima \textit{Activity}, a segunda (imagem \ref*{hw_result}) \textit{Activity} apenas exibe a mensagem escrita.
+%inserir as imagens da primeira e segunda tela
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{hw_message} 
+		\caption{Interface do aplicativo que\\\hspace{\textwidth}recebe um texto e envia para a \\\hspace{\textwidth}pr\'oxima interface}
+		\label{hw_message}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{hw_result}
+		\caption{Interface que exibe a mensagem\\\hspace{\textwidth}da \textit{Activity} anterior\\\hspace{\textwidth}}
+		\label{hw_result}
+	\end{subfigure}
+	\caption{Interfaces do aplicativo do tutorial}
+	\label{hw}
+\end{figure}
+
+Apesar de ser um exemplo um tanto trivial, ele engloba alguns aspectos importantes do \textit{Android}:
+\begin{itemize}
+	\item Cria\c{c}\~ao de interface
+	\item Cria\c{c}\~ao de componentes para a interface
+	\item Uso de \textit{intents} para trafego de dados entre as interfaces
+	\item Procurar, extrair e exibir textos nas interfaces a partir do ID
+\end{itemize}
+\subsection{Desenvolvimento das interfaces do aplicativo}
 %Final do doc
 \newpage
 \section*{Refer\^encias Bibliogr\'aficas}
@@ -248,6 +283,4 @@ Quanto a \textit{hardware} foram usados um \textit{notebook} pr\'oprio rodando u
 \renewcommand\refname{}
 \bibliography{helper}
 \bibliographystyle{unsrt}
-\end{document}\begin{equation}
-
-\end{equation}
+\end{document}

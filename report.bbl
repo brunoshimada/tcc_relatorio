@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{invest}
 Investopedia.
@@ -58,5 +58,12 @@ Google.
 \newblock {C}olor {T}ool - {M}aterial {D}esgin.
 \newblock Dispon\'ivel em: \url{https://material.io/color/}.
 \newblock Primeiro acesso em 15 de set.2017.
+
+\bibitem{androidhw}
+Google.
+\newblock Building {Y}our {F}irst {A}pp.
+\newblock Dispon\'ivel em:
+  \url{https://developer.android.com/training/basics/firstapp/index.html}.
+\newblock Primeiro acesso em 21 de ago.2017.
 
 \end{thebibliography}
