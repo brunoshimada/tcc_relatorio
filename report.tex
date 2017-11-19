@@ -17,6 +17,7 @@
 \usepackage{float}
 \usepackage{subcaption}
 
+\usepackage{listings}
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
 \makeatother
@@ -132,6 +133,11 @@ To solve this problem the micropayments services come into play, seeking to solv
 \begingroup
 \centering
 \listoffigures
+\endgroup
+\selectlanguage{brazil}
+\begingroup
+\centering
+\lstlistoflistings
 \endgroup
 \newpage
 \selectlanguage{brazil}
@@ -277,6 +283,73 @@ Apesar de ser um exemplo um tanto trivial, ele engloba alguns aspectos important
 \end{itemize}
 
 Ap\'os o contato inicial com a plataforma e o desenvolvimento do aplicativo acima, fui em uma busca de mais material e comecei a ler o livro \textbf{"\textit{{Android}} 5 Programming by Example"} \cite{andppe}. Com o conhecimento sobre micropagamentos, o livro citado e os guias, todos indicados na se\c{c}\~ao \ref{revisao}, iniciei o desenvolvimento de um aplicativo que simulasse um micropagamento, o aplicativo era totalmente \textit{offline} e apenas fazia um \textit{mock} de servi\c{c}o de transa\c{c}\~oes.
+
+Para o aplicativo tentei imaginar qual o m\'inimo de interfaces que precisaria para simular o uso do aplicativo por um usu\'ario que queria executar uma transa\c{c}\~ao, e cheguei as seguintes interfaces:
+\begin{enumerate}
+	\item \label{int:login}Interface de acesso, com espa\c{c}o para o usu\'ario colocar o seu login, a senha, um bot\~ao de confirma\c{c}\~ao e o logo do aplicativo
+	\item \label{int:main}Interface principal do aplicativo com as a\c{c}\~oes que o usu\'ario pode fazer mapeadas em bot\~oes
+	\item \label{int:pay}Interface de pagamento onde o usu\'ario preenche quem \'e o destinat\'ario, o valor, a data e confirma
+	\item \label{int:confirm}Interface de confirma\c{c}\~ao da transa\c{c}\~ao
+\end{enumerate}
+Essas interfaces foram decididas como as principais para desenvolver e testar o conceito de micropagamento em uma escala absurdamente menor, em um ambiente controlado apenas para validar id\'eias e testar conceitos novos no desenvolvimento de interfaces para \textit{Android}.
+
+A interface de \textit{login} (item \ref{int:login}) foi a primeira a ser desenvolvida, \'e a interface mais simples do aplicativo. Os pontos novos do aprendizado nessa interface foram inserir uma imagem na tela e colocar um campo texto do tipo senha, em que os caract\'eres aparecem como asterisco a medida que s\~ao digitados. A interface por fim est\'a ilustrada na imagem \ref{int:login_img}.
+
+A interface principal do aplicatvo foi a segunda, o ponto novo aplicado nessa interface foi a inclus\~ao de \'icones dentro de um \textit{Button}. A interface est\'a ilustrada na imagem \ref{int:main}.
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{int:login}
+		\caption{Interface de \textit{login}\\\hspace{\textwidth}\\\hspace{\textwidth}}
+		\label{int:login_img}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{int:main}
+		\caption{Interface principal do aplicativo\\\hspace{\textwidth}com as a\c{c}\~oes permitidas ao\\\hspace{\textwidth}usu\'ario mapeadas como bot\~oes}
+		\label{int:main}
+	\end{subfigure}
+	\caption{Interfaces do aplicativo \textit{mock}}
+	\label{loginmain}
+\end{figure}
+
+A interface de pagamentos \'e a que considerei a mais interessante de se fazer, ela possui dois elementos visuais que demandaram grande esfor\c{c}o para entender o funcionamento e a aplica\c{c}\~ao, um deles \'e um calend\'ario para selecionar datas e o outro \'e uma barra deslizante que de acordo com a posi\c{c}\~ao define qual o valor da transa\c{c}\~ao.
+
+Dentre os dois o que gerou maior dificuldade para ser feito foi o calend\'ario, o \textit{Android} fornece um DatePicker padr\~ao, por\'em ele n\~ao se adequava a implementa\c{c}\~ao desejada, o que busquei fazer para o funcionamento dele era que ao clicar em um campo de entrada de texto comum, abrisse um calend\'ario para que o usu\'ario escolhesse a data e ao finalizar fechasse o calend\'aro novamente.
+
+Para atingir esse efeito foi necess\'ario criar um Fragment que implementasse o DatePicker padr\~ao do \textit{Android}, foi sobreescrito o m\'etodo de onCreate para que ao criar o Fragment retornasse um DatePicker com a data atual. A implementa\c{c}\~ao do Fragment pode ser vista na \textit{listing} \ref{datepicker}.
+\newpage
+\begin{lstlisting}[language=Java, caption=\textit{Fragment} do calend\'ario, captionpos=b, breaklines=true, label=datepicker]
+public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener{
+	@Override
+	public Dialog onCreateDialog(Bundle savedInstanceState) {
+		final Calendar calendar = Calendar.getInstance();
+		int year = calendar.get(Calendar.YEAR);
+		int month = calendar.get(Calendar.MONTH);
+		int day = calendar.get(Calendar.DAY_OF_MONTH);
+		return new DatePickerDialog(getActivity(), (TransactionActivity)getActivity(), year,month,day);
+	}
+\end{lstlisting}
+No c\'odigo de controle da \textit{Activity} foi preciso adicionar um \textit{listener} no campo texto que fica aguardando um 'clique', quando \'e clicado, chama uma fun\c{c}\~ao que instancia o \textit{Fragment} e exibe na interface, ainda nesse controle foi criada uma fun\c{c}\~ao que atribui ao campo do calend\'ario a data selecionada, essa fun\c{c}\~ao \'e sobreescrita de uma definida na mesma classe do \textit{Fragment} do \textit{DatePicker} (ver \textit{listing} \ref{datepicker}).
+
+Para o outro componente, a barra deslizante chamada de \textit{SeekBar}, a implementa\c{c}\~ao exigiu menos codifica\c{c}\~ao, n\~ao foi necess\'ario criar classes adicionais como feito no \textit{DatePicker} (\textit{listing} \ref{datepicker}), j\'a que o componente padr\~ao atendia as necessidades da interface, o que precisou ser codificado foi implementar um \textit{listener} na barra para detectar movimentos nela e sobrepor 3 m\'etodos padr\~oes que definem as a\c{c}\~oes de in\'icio, fim e mudan\c{c}a de status. A de \'inicio n\~ao faz nada, apenas \'e instanciada para definir a barra, a de mudan\c{c}a de status pega o valor de onde a barra parou e atribui \`a uma var\'iavel e a final \'e encarregada de atualizar o campo texto com o valor atual selecionado. A implementa\c{c}\~ao pode ser vista na \textit{listing} \ref{seekbar}.
+\newpage
+\begin{lstlisting}[language=Java, caption=\textit{SeekBar} do valor, captionpos=b, breaklines=true, label=seekbar]
+SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
+seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+	int actual_value = 0;
+	@Override
+	public void onProgressChanged(SeekBar seekBar, int new_value, boolean b) {
+		actual_value = new_value;
+	}
+	@Override
+	public void onStartTrackingTouch(SeekBar seekBar) {
+	}
+	@Override
+	public void onStopTrackingTouch(SeekBar seekBar) {
+		TextView transferValue = (TextView) findViewById(R.id.rvalueTransfer);
+		transferValue.setText(Integer.toString(actual_value);
+	}
+});
+\end{lstlisting}
 \subsection{Desenvolvimento das interfaces do aplicativo}
 %Final do doc
 \newpage
