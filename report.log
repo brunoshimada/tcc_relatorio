@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.11)  19 NOV 2017 02:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.11.11)  19 NOV 2017 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,22 +263,22 @@ LaTeX Warning: Label `int:confirm' multiply defined.
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 29.
+Package hyperref Info: Link coloring OFF on input line 30.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -287,9 +287,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count114
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (./report.out) (./report.out)
 \@outlinefile=\write3
@@ -363,42 +363,37 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count121
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 42.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 41.
+(babel)             in language append on input line 42.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 57.
+(babel)             in language append on input line 58.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 57.
+(babel)             in language append on input line 58.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.57 \end{titlepage}
+l.58 \end{titlepage}
                      [1]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 86.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 85.
+(babel)             in language append on input line 86.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.85 \end{titlepage}
+l.86 \end{titlepage}
                      [1]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 90.
+(babel)             in language append on input line 92.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 90.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.90 \newpage
-              [1]
+(babel)             in language append on input line 92.
+ [1]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ­ in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -406,32 +401,32 @@ Missing character: There is no § in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no µ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--102
+Underfull \hbox (badness 10000) in paragraph at lines 102--104
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 107.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 109.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 109.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 111.
+(babel)             in language append on input line 113.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 111.
+(babel)             in language append on input line 113.
  [2]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--122
+Underfull \hbox (badness 10000) in paragraph at lines 122--124
 
  []
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 126.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
 [3] (./report.lof
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <12> on input line 9.
@@ -448,265 +443,298 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout5 = `report.lol'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 142.
+(babel)             in language append on input line 144.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 142.
+(babel)             in language append on input line 144.
  [4] (./report.toc)
 \tf@toc=\write6
 \openout6 = `report.toc'.
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 148.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 148.
- [5]
-Package babel Info: Redefining portuges shorthand "|
 (babel)             in language append on input line 150.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 166.
+(babel)             in language append on input line 150.
+ [5]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 166.
- [6]
+(babel)             in language append on input line 153.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 167.
+(babel)             in language append on input line 169.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 169.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.169 \newpage
+               [1]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language append on input line 170.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 173.
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--173
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 175.
+(babel)             in language append on input line 178.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 182.
+(babel)             in language append on input line 185.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 182.
-[7]
+(babel)             in language append on input line 185.
+[2]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 183.
+(babel)             in language append on input line 186.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
-
- []
-
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 202.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 202.
-[8]
 Underfull \hbox (badness 10000) in paragraph at lines 202--204
+
+ []
+
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 205.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 205.
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 205--207
 
  []
 
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¢ in font cmr12!
-<images/pay_action_white.png, id=137, 36.135pt x 36.135pt>
+<images/pay_action_white.png, id=144, 36.135pt x 36.135pt>
 File: images/pay_action_white.png Graphic file (type png)
 
 <use images/pay_action_white.png>
-Package pdftex.def Info: images/pay_action_white.png used on input line 212.
+Package pdftex.def Info: images/pay_action_white.png used on input line 215.
 (pdftex.def)             Requested size: 36.13489pt x 36.13489pt.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 221.
+(babel)             in language append on input line 224.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 221.
- [9 <./images/pay_action_white.png>]
+(babel)             in language append on input line 224.
+ [4 <./images/pay_action_white.png>]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 222.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 227.
+(babel)             in language append on input line 225.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 230.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 227.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 230.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¢ in font cmr12!
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 237.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 240.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 240.
+(Font)              <5> on input line 243.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 249.
+(babel)             in language append on input line 252.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 249.
- [10]
+(babel)             in language append on input line 252.
+ [5]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 253.
+(babel)             in language append on input line 256.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 253.
- [11]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 254.
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no º in font cmr12!
+(babel)             in language append on input line 256.
+ [6]
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language append on input line 257.
 Missing character: There is no Ã in font cmr12!
+Missing character: There is no º in font cmr12!
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 260.
+Missing character: There is no Ã in font cmr12!
 Missing character: There is no ª in font cmr12!
 
-<images/hw_message.png, id=169, 328.22626pt x 614.295pt>
+<images/hw_message.png, id=176, 328.22626pt x 614.295pt>
 File: images/hw_message.png Graphic file (type png)
 
 <use images/hw_message.png>
-Package pdftex.def Info: images/hw_message.png used on input line 264.
+Package pdftex.def Info: images/hw_message.png used on input line 267.
 (pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
 
-<images/hw_result.png, id=170, 328.22626pt x 614.295pt>
+<images/hw_result.png, id=177, 328.22626pt x 614.295pt>
 File: images/hw_result.png Graphic file (type png)
 
 <use images/hw_result.png>
-Package pdftex.def Info: images/hw_result.png used on input line 269.
+Package pdftex.def Info: images/hw_result.png used on input line 272.
 (pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 263--273
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 266--276
 []$[]$ $[]$ 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 276.
+(babel)             in language append on input line 279.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 276.
-[12]
+(babel)             in language append on input line 279.
+[7]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 289.
+(babel)             in language append on input line 292.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 289.
- [13 <./images/hw_message.png> <./images/hw_result.png>]
-<images/int:login.png, id=189, 328.22626pt x 614.295pt>
+(babel)             in language append on input line 292.
+ [8 <./images/hw_message.png> <./images/hw_result.png>]
+<images/int:login.png, id=196, 328.22626pt x 614.295pt>
 File: images/int:login.png Graphic file (type png)
 
 <use images/int:login.png>
-Package pdftex.def Info: images/int:login.png used on input line 301.
+Package pdftex.def Info: images/int:login.png used on input line 304.
 (pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
 
-<images/int:main.png, id=190, 328.22626pt x 614.295pt>
+<images/int:main.png, id=197, 328.22626pt x 614.295pt>
 File: images/int:main.png Graphic file (type png)
 
 <use images/int:main.png>
-Package pdftex.def Info: images/int:main.png used on input line 306.
+Package pdftex.def Info: images/int:main.png used on input line 309.
 (pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 300--310
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 303--313
 []$[]$ $[]$ 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 313.
+(babel)             in language append on input line 316.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 313.
-[14]
+(babel)             in language append on input line 316.
+[9]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 319.
+(babel)             in language append on input line 322.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 319.
- [15 <./images/int:login.png> <./images/int:main.png>]
+(babel)             in language append on input line 322.
+ [10 <./images/int:login.png> <./images/int:main.png>]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 320.
+nput line 323.
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¡ in font cmr12!
 
-<images/int:main_nocal.png, id=211, 328.22626pt x 614.295pt>
+<images/int:main_nocal.png, id=218, 328.22626pt x 614.295pt>
 File: images/int:main_nocal.png Graphic file (type png)
 
 <use images/int:main_nocal.png>
-Package pdftex.def Info: images/int:main_nocal.png used on input line 336.
+Package pdftex.def Info: images/int:main_nocal.png used on input line 339.
 (pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
 
-<images/int:main_cal.png, id=212, 328.22626pt x 614.295pt>
+<images/int:main_cal.png, id=219, 328.22626pt x 614.295pt>
 File: images/int:main_cal.png Graphic file (type png)
 
 <use images/int:main_cal.png>
-Package pdftex.def Info: images/int:main_cal.png used on input line 341.
+Package pdftex.def Info: images/int:main_cal.png used on input line 344.
 (pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 335--345
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 338--348
 []$[]$ $[]$ 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 348.
+(babel)             in language append on input line 351.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 348.
-[16]
+(babel)             in language append on input line 351.
+[11]
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 350.
+(babel)             in language append on input line 353.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 350.
- [17 <./images/int:main_nocal.png> <./images/int:main_cal.png>]
+(babel)             in language append on input line 353.
+ [12 <./images/int:main_nocal.png> <./images/int:main_cal.png>]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no º in font cmr12!
 
-<images/int:pay.png, id=237, 328.22626pt x 614.295pt>
+<images/int:pay.png, id=244, 328.22626pt x 614.295pt>
 File: images/int:pay.png Graphic file (type png)
  <use images/int:pay.png>
-Package pdftex.def Info: images/int:pay.png used on input line 374.
-(pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
-File: images/int:main_cal.png Graphic file (type png)
-
-<use images/int:main_cal.png>
-Package pdftex.def Info: images/int:main_cal.png used on input line 379.
+Package pdftex.def Info: images/int:pay.png used on input line 377.
 (pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 373--383
+<images/int:confirm.png, id=245, 328.22626pt x 614.295pt>
+File: images/int:confirm.png Graphic file (type png)
+
+<use images/int:confirm.png>
+Package pdftex.def Info: images/int:confirm.png used on input line 382.
+(pdftex.def)             Requested size: 164.11272pt x 307.14674pt.
+
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 376--386
 []$[]$ $[]$ 
  []
 
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 386.
+(babel)             in language append on input line 389.
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 386.
-[18]
+(babel)             in language append on input line 389.
+[13]
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ­ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 389.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 391.
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 391.
- [19 <./images/int:pay.png>]
-Package babel Info: Redefining portuges shorthand "|
-(babel)             in language append on input line 393.
- (./report.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 397.
+(babel)             in language append on input line 392.
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no º in font cmr12!
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language append on input line 397.
 Package babel Info: Redefining portuges shorthand "|
 (babel)             in language append on input line 397.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 397.
+ [14 <./images/int:pay.png> <./images/int:confirm.png>]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no   in font cmr12!
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 400.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 420.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 420.
+ [15]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 428.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 430.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 430.
+ [16]
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 432.
+
+(./report.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 436.
+Package babel Info: Redefining portuges shorthand "|
+(babel)             in language append on input line 436.
+ [17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 397.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 397.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 436.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 80463D5A1E40B1F571EFCB532BE50453;639.
+(rerunfilecheck)             Checksum: 6819C77CFC6DA81F0CDAA919EF50B76D;687.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 397.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
  ) 
 Here is how much of TeX's memory you used:
- 8628 strings out of 494929
- 130335 string characters out of 6180141
- 267947 words of memory out of 5000000
- 11750 multiletter control sequences out of 15000+600000
+ 8735 strings out of 494929
+ 132005 string characters out of 6180141
+ 274019 words of memory out of 5000000
+ 11822 multiletter control sequences out of 15000+600000
  10691 words of font info for 37 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 42i,9n,42p,1042b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,9n,51p,1134b,1786s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/te
@@ -719,10 +747,10 @@ ts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type
 nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (23 pages, 599784 bytes).
+Output written on report.pdf (25 pages, 677019 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 83 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 404 PDF objects out of 1000 (max. 8388607)
+ 341 compressed objects within 4 object streams
+ 113 named destinations out of 1000 (max. 500000)
+ 134 words of extra memory for PDF output out of 10000 (max. 10000000)
 

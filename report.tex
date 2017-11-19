@@ -18,6 +18,7 @@
 \usepackage{subcaption}
 
 \usepackage{listings}
+
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
 \makeatother
@@ -86,6 +87,7 @@
 \newpage
 \selectlanguage{brazil}
 \section*{\centering{Agradecimentos}}
+\pagenumbering{roman}
 section
 \newpage
 \selectlanguage{brazil}
@@ -146,6 +148,7 @@ To solve this problem the micropayments services come into play, seeking to solv
 \tableofcontents
 \endgroup
 \newpage
+\pagenumbering{arabic}
 \selectlanguage{brazil}
 \section{Introdu\c{c}\~ao}
 A defini\c{c}\~ao de micropagamento \'e relativamente simples, se usado uma associa\c{c}\~ao das palavras que a comp\~oem, se infere que se trata de transa\c{c}\~oes cujo valor \'e uma quantia muito pequena. Trazendo para a realidade dele, um micropagamento \'e uma transa\c{c}\~ao online de uma quantia muito pequena de dinheiro (INVESTOPEDIA). Qu\~ao pequeno esse valor \'e, varia entre as diferentes empresas no mercado, o \textit{PayPal}, \textit{e-commerce} que faz a transa\c{c}\~ao de valores digitais entre usu\'arios nas duas pontas, considera um micropagamento qualquer transa\c{c}\~ao cujo valor seja menor do que 10USD (PAYPAL).
@@ -254,7 +257,7 @@ Quanto a \textit{hardware} foram usados um \textit{notebook} pr\'oprio rodando u
 \section{Resultados}
 Para melhor entendimento dos resultados, os mesmos v\~ao ser divididos em duas se\c{c}\~oes. A primeira com os resultados do aprendizado em desenvolvimento para \textit{Android}, onde v\~ao ser apresentados as dificuldades iniciais, dúvidas que surgiram e o aplicativo \textit{mock} desenvolvido que simulava uma transa\c{c}\~ao de micropagamento. Na segunda se\c{c}\~ao ser\'a descrito o desenvolvimento em si do aplicativo final, usando j\'a a platforma de servi\c{c}os.
 
-\subsection{Aprendizado em desenvolvimento para \textit{Android}}
+\subsection{Aprendizado em desenvolvimento para \textit{Android}} \label{learn}
 Um dos objetivos espec\'ificos para esse projeto era aprender desenvolvimento para a plataforma \textit{Android}. At\'e o in\'icio do projeto eu nunca havia tido contato com o desenvolvimento para \textit{Android}, ent\~ao o primeiro passo foi ir atr\'as de material sobre o mesmo, o ponto inicial para isso assumi que seria o site oficial da plataforma, isso por experiências passadas de estudo onde a p\'agina de alguma linguagem, \textit{framework}, etc, em grande partes dos casos possuia uma boa documenta\c{c}\~ao sobre a mesma. A p\'agina da plataforma do \textit{Android} felizmente seguia essa linha, e na mesma encontrei as informa\c{c}\~oes necess\'arias para dar in\'icio no aprendizado.
 
 Ap\'os a configura\c{c}\~ao do ambiente, instalando \textit{Java} e a \textit{IDE} apenas, segui o tutorial \cite{androidhw} que explica como criar um aplicativo b\'asico (imagem \ref{hw}) para testar as configura\c{c}\~oes locais. O resultado \'e um aplicativo com duas \textit{Activities} (interfaces), a primeira (imagem \ref*{hw_message}) possui uma \textit{EditText} para escrever uma mensagem e um bot\~ao que chama a pr\'oxima \textit{Activity}, a segunda (imagem \ref*{hw_result}) \textit{Activity} apenas exibe a mensagem escrita.
@@ -376,7 +379,7 @@ A última interface, \'e a de confirma\c{c}\~ao do pagamento (item \ref{int:conf
 		\label{int:pay_img}
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{int:main_cal}
+		\includegraphics[scale=0.5]{int:confirm}
 		\caption{Interface de confirma\c{c}\~ao com\\\hspace{\textwidth}os dados preenchidos na \ref{int:pay_img}}
 		\label{int:confirm}
 	\end{subfigure}
@@ -387,6 +390,42 @@ A última interface, \'e a de confirma\c{c}\~ao do pagamento (item \ref{int:conf
 Ap\'os o desenvolvimento desses dois aplicativos considerei ter adquirido um conhecimento suficiente para prosseguir e dar início ao desenvolvimento da interface do aplicativo alvo deste trabalho. \'E claro que passei por um n\'umero pequeno de componentes que o \textit{Android} possui, existem diversos outros \textit{Fragments} que executam diferentes tarefas de diferentes formas visuais, além de muitos outros componentes que at\'e o momento da finaliza\c{c}\~ao desse aplicativo n\~ao vi como necess\'arios para este desenvolvimento em espec\'ifico.
 
 \subsection{Desenvolvimento das interfaces do aplicativo}
+
+Finalizada a etapa de aprendizado em \textit{Android}, dei in\'icio ao segundo objetivo do trabalho que consistia em desenhar as interfaces do aplicativo de micropagamentos operando sobre uma base de servi\c{c}os funcional. O primeiro passo foi a familiariza\c{c}\~ao com a plataforma, entender o fluxo de execu\c{c}\~ao, os triggers, os listeners, estudar literalmente a plataforma inteira, nessa parte contei com a colabora\c{c}\~ao do \textbf{Henrique Leme}, desenvolvedor da plataforma, com o aux\'ilio dele essa parte foi facilitada permitindo que a assimila\c{c}\~ao do conteúdo fosse mais flu\'ida.
+
+Passada essa parte foi definido que o desenvolvimento seria principalmente no diret\'orio \textit{res}, na estrutura de um projeto \textit{Android}, nesse diret\'orio ficam todos os arquivos relacionados a parte visual do aplicativo, as interfaces, os \'icones, as imagens, defini\c{c}\~oes de estilos, \textit{Strings}, etc. Tamb\'em foi preciso em alguns pontos fazer modifica\c{c}\~oes no \textit{MainActivity}, j\'a que algumas interfaces precisaram ser mapeadas e algumas a\c{c}\~oes foram reescritas para atender o novo formato no \textit{layout}.
+
+Uma mudan\c{c}a substancial no desenvolvimento dessas interfaces foi o uso do \textit{RelativeLayout} ao inv\'es do \textit{ConstraintLayout} que foi usado nos dois aplicativos descritos na sub-se\c{c}\~ao \ref{learn}. Durante a execu\c{c}\~ao dos dois aplicativos anteriores esse detalhe passou desapercebido durante o desenvolvimento, o que ocasionou um certo volume de trabalho para estabelecer a posi\c{c}\~ao de cada componente na tela. A vantagem no uso do \textit{RelativeLayout} \'e poder declarar a posi\c{c}\~ao dos componentes de acordo com seus parentes ou seus irm\~aos, ele d\'a um maior controle sobre os itens no \textit{layout}. Por exemplo, temos uma \textit{view} que define uma \'area retangular na interface, e dentro dessa \'area precisam estar 3 outros componentes, vamos dizer bot\~oes, e esses 3 componentes precisam estar alinhados à direita da \'area. Com o \textit{RelativeLayout} declaramos a \'area, o primeiro bot\~ao alinhado a direita da \'area, e cada um dos bot\~oes subsequentes um abaixo do outro, o c\'odigo para esta ilustrado na \textit{listing} \ref{relative}.
+\begin{lstlisting}[language=XML, caption=\textit{Exemplo de uso de um \textit{RelativeLayout}}, captionpos=b, breaklines=true, label=relative]
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:paddingLeft="16dp"
+	android:paddingRight="16dp">
+	<Button
+		android:id = "@+id/box1"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:text="button1" />
+	<Button
+		android:id = "@+id/box2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/box1"
+		android:layout_alignParentLeft="true"
+		android:text="button2" />
+	<Button
+		android:id = "@+id/box3"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/box2"
+		android:layout_alignParentLeft="true"
+		android:text="button3" />
+</RelativeLayout>
+\end{lstlisting}
+
+\section{Conclus\~ao}
 %Final do doc
 \newpage
 \section*{Refer\^encias Bibliogr\'aficas}
