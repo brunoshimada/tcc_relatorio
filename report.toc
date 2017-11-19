@@ -14,5 +14,5 @@
 \contentsline {section}{\numberline {4}Metodologia}{10}{section.4}
 \contentsline {section}{\numberline {5}Resultados}{12}{section.5}
 \contentsline {subsection}{\numberline {5.1}Aprendizado em desenvolvimento para \textit {Android}}{12}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Desenvolvimento das interfaces do aplicativo}{17}{subsection.5.2}
-\contentsline {section}{Refer\^encias Bibliogr\'aficas}{18}{section*.9}
+\contentsline {subsection}{\numberline {5.2}Desenvolvimento das interfaces do aplicativo}{19}{subsection.5.2}
+\contentsline {section}{Refer\^encias Bibliogr\'aficas}{20}{section*.11}

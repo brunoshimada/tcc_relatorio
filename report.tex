@@ -287,7 +287,7 @@ Ap\'os o contato inicial com a plataforma e o desenvolvimento do aplicativo acim
 Para o aplicativo tentei imaginar qual o m\'inimo de interfaces que precisaria para simular o uso do aplicativo por um usu\'ario que queria executar uma transa\c{c}\~ao, e cheguei as seguintes interfaces:
 \begin{enumerate}
 	\item \label{int:login}Interface de acesso, com espa\c{c}o para o usu\'ario colocar o seu login, a senha, um bot\~ao de confirma\c{c}\~ao e o logo do aplicativo
-	\item \label{int:main}Interface principal do aplicativo com as a\c{c}\~oes que o usu\'ario pode fazer mapeadas em bot\~oes
+	\item \label{int:main_list}Interface principal do aplicativo com as a\c{c}\~oes que o usu\'ario pode fazer mapeadas em bot\~oes
 	\item \label{int:pay}Interface de pagamento onde o usu\'ario preenche quem \'e o destinat\'ario, o valor, a data e confirma
 	\item \label{int:confirm}Interface de confirma\c{c}\~ao da transa\c{c}\~ao
 \end{enumerate}
@@ -295,7 +295,7 @@ Essas interfaces foram decididas como as principais para desenvolver e testar o 
 
 A interface de \textit{login} (item \ref{int:login}) foi a primeira a ser desenvolvida, \'e a interface mais simples do aplicativo. Os pontos novos do aprendizado nessa interface foram inserir uma imagem na tela e colocar um campo texto do tipo senha, em que os caract\'eres aparecem como asterisco a medida que s\~ao digitados. A interface por fim est\'a ilustrada na imagem \ref{int:login_img}.
 
-A interface principal do aplicatvo foi a segunda, o ponto novo aplicado nessa interface foi a inclus\~ao de \'icones dentro de um \textit{Button}. A interface est\'a ilustrada na imagem \ref{int:main}.
+A interface principal (item \ref{int:main_list}) do aplicatvo foi a segunda, o ponto novo aplicado nessa interface foi a inclus\~ao de \'icones dentro de um \textit{Button}. A interface est\'a ilustrada na imagem \ref{int:main}.
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.5]{int:login}
@@ -311,7 +311,7 @@ A interface principal do aplicatvo foi a segunda, o ponto novo aplicado nessa in
 	\label{loginmain}
 \end{figure}
 
-A interface de pagamentos \'e a que considerei a mais interessante de se fazer, ela possui dois elementos visuais que demandaram grande esfor\c{c}o para entender o funcionamento e a aplica\c{c}\~ao, um deles \'e um calend\'ario para selecionar datas e o outro \'e uma barra deslizante que de acordo com a posi\c{c}\~ao define qual o valor da transa\c{c}\~ao.
+A interface de pagamentos (item \ref{int:pay}) \'e a que considerei a mais interessante de se fazer, ela possui dois elementos visuais que demandaram grande esfor\c{c}o para entender o funcionamento e a aplica\c{c}\~ao, um deles \'e um calend\'ario para selecionar datas e o outro \'e uma barra deslizante que de acordo com a posi\c{c}\~ao define qual o valor da transa\c{c}\~ao.
 
 Dentre os dois o que gerou maior dificuldade para ser feito foi o calend\'ario, o \textit{Android} fornece um DatePicker padr\~ao, por\'em ele n\~ao se adequava a implementa\c{c}\~ao desejada, o que busquei fazer para o funcionamento dele era que ao clicar em um campo de entrada de texto comum, abrisse um calend\'ario para que o usu\'ario escolhesse a data e ao finalizar fechasse o calend\'aro novamente.
 
@@ -329,6 +329,22 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
 	}
 \end{lstlisting}
 No c\'odigo de controle da \textit{Activity} foi preciso adicionar um \textit{listener} no campo texto que fica aguardando um 'clique', quando \'e clicado, chama uma fun\c{c}\~ao que instancia o \textit{Fragment} e exibe na interface, ainda nesse controle foi criada uma fun\c{c}\~ao que atribui ao campo do calend\'ario a data selecionada, essa fun\c{c}\~ao \'e sobreescrita de uma definida na mesma classe do \textit{Fragment} do \textit{DatePicker} (ver \textit{listing} \ref{datepicker}).
+
+Um exemplo de como o \textit{Fragment} \'e carregado e renderizado na tela pode ser visto na imagem \ref{main_calendar}. A imagem \ref{int:main_nocal} mostra a interface ao ser carregada, nesse momento o \textit{listener} est\'a aguardando um 'clique' na \'area de texto ao lado de \textbf{Escolha uma data} para carregar o calendário. A imagem \ref{int:main_cal} mostra o \textit{Fragment} carregado na interface.
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{int:main_nocal}
+		\caption{\textit{DatePicker} n\~ao\\\hspace{\textwidth}selecionado}
+		\label{int:main_nocal}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{int:main_cal}
+		\caption{\textit{Fragment} do \textit{DatePicker} \\\hspace{\textwidth}carregado}
+		\label{int:main_cal}
+	\end{subfigure}
+	\caption{Exemplo de uso do \textit{Fragment} do \textit{DatePicker}}
+	\label{main_calendar}
+\end{figure}
 
 Para o outro componente, a barra deslizante chamada de \textit{SeekBar}, a implementa\c{c}\~ao exigiu menos codifica\c{c}\~ao, n\~ao foi necess\'ario criar classes adicionais como feito no \textit{DatePicker} (\textit{listing} \ref{datepicker}), j\'a que o componente padr\~ao atendia as necessidades da interface, o que precisou ser codificado foi implementar um \textit{listener} na barra para detectar movimentos nela e sobrepor 3 m\'etodos padr\~oes que definem as a\c{c}\~oes de in\'icio, fim e mudan\c{c}a de status. A de \'inicio n\~ao faz nada, apenas \'e instanciada para definir a barra, a de mudan\c{c}a de status pega o valor de onde a barra parou e atribui \`a uma var\'iavel e a final \'e encarregada de atualizar o campo texto com o valor atual selecionado. A implementa\c{c}\~ao pode ser vista na \textit{listing} \ref{seekbar}.
 \newpage
@@ -350,6 +366,26 @@ seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
 	}
 });
 \end{lstlisting}
+
+A última interface, \'e a de confirma\c{c}\~ao do pagamento (item \ref{int:confirm}), \'e uma tela simples que apenas carrega as informa\c{c}\~oes inseridas na interface anterior (ver imagem \ref{int:main_nocal}) para confirma\c{c}\~ao e execu\c{c}\~ao, lembrando que execu\c{c}\~ao no contexto atual \'e uma simula\c{c}\~ao, do pagamento. Essa interface n\~ao teve nenhum desenvolvimento expressivo j\'a que ela usa elementos, nesse ponto do aprendizado, b\'asicos, como campos textos carregando informa\c{c}\~oes vindos da leitura da \textit{Intent} que transportou os dados de uma \textit{Activity} para outra.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{int:pay}
+		\caption{Interface com todas as\\\hspace{\textwidth}informa\c{c}\~oes preenchidas}
+		\label{int:pay_img}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.5]{int:main_cal}
+		\caption{Interface de confirma\c{c}\~ao com\\\hspace{\textwidth}os dados preenchidos na \ref{int:pay_img}}
+		\label{int:confirm}
+	\end{subfigure}
+	\caption{Confirma\c{c}\~ao dos dados de uma transa\c{c}\~ao}
+	\label{pay_composite}
+\end{figure}
+
+Ap\'os o desenvolvimento desses dois aplicativos considerei ter adquirido um conhecimento suficiente para prosseguir e dar início ao desenvolvimento da interface do aplicativo alvo deste trabalho. \'E claro que passei por um n\'umero pequeno de componentes que o \textit{Android} possui, existem diversos outros \textit{Fragments} que executam diferentes tarefas de diferentes formas visuais, além de muitos outros componentes que at\'e o momento da finaliza\c{c}\~ao desse aplicativo n\~ao vi como necess\'arios para este desenvolvimento em espec\'ifico.
+
 \subsection{Desenvolvimento das interfaces do aplicativo}
 %Final do doc
 \newpage
