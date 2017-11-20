@@ -391,7 +391,7 @@ A última interface, \'e a de confirma\c{c}\~ao do pagamento (item \ref{int:conf
 
 Ap\'os o desenvolvimento desses dois aplicativos considerei ter adquirido um conhecimento suficiente para prosseguir e dar início ao desenvolvimento da interface do aplicativo alvo deste trabalho. \'E claro que passei por um n\'umero pequeno de componentes que o \textit{Android} possui, existem diversos outros \textit{Fragments} que executam diferentes tarefas de diferentes formas visuais, além de muitos outros componentes que at\'e o momento da finaliza\c{c}\~ao desse aplicativo n\~ao vi como necess\'arios para este desenvolvimento em espec\'ifico.
 
-\subsection{Desenvolvimento das interfaces do aplicativo}
+\subsection{Desenvolvimento das interfaces do aplicativo} \label{dev}
 
 Finalizada a etapa de aprendizado em \textit{Android}, dei in\'icio ao segundo objetivo do trabalho que consistia em desenhar as interfaces do aplicativo de micropagamentos operando sobre uma base de servi\c{c}os funcional. O primeiro passo foi a familiariza\c{c}\~ao com a plataforma, entender o fluxo de execu\c{c}\~ao, os triggers, os listeners, estudar literalmente a plataforma inteira, nessa parte contei com a colabora\c{c}\~ao do \textbf{Henrique Leme}, desenvolvedor da plataforma, com o aux\'ilio dele essa parte foi facilitada permitindo que a assimila\c{c}\~ao do conteúdo fosse mais flu\'ida.
 
@@ -436,7 +436,22 @@ A segunda mudan\c{c}a foi o uso de um arquivo \textit{XML} para armazenar todas 
 Flexibilidade pois tendo o arquivo como base \'e poss\'ivel traduzir ele para outros idiomas, como o id das \textit{strings} permanece o mesmo, as mesmas j\'a est\~ao referenciadas no c\'odigo e v\~ao exibir o valor definido. Isto \'e útil para se localizar o aplicativo para outros pa\'ises que usam uma linguagem diferente da que se foi desenvolvido o aplicativo inicialmente.
 
 Reusabilidade porque elas s\~ao apenas referenciadas no c\'odigo, qualquer mudan\c{c}a que for feita em um dos valores \'e replicada por todo o aplicativo poupando o trabalho de precisar reescrever todas as ocorrências e correr o risco de esquecer alguma, al\'em da possibilidade de usar uma mesma palavra em diversos elementos do aplicativo sem a necessidade de escrever o mesmo repetidas vezes.
-\section{Conclus\~ao}
+\section{Considera\c{c}\~oes Finais}
+No in\'icio do projeto foram definidos dois objetivos para este trabalho, aprender o desenvolvimento para \textit{Android} e aplicar o conhecimento adquirido para produzir as interfaces de um aplicativo. Sendo o primeiro pr\'e-requisito obrigat\'orio para a execu\c{c}\~ao do segundo, \'e mais prudente discorrer sobre ele de in\'icio.
+
+O desenvolvimento para \textit{Android} conta com uma boa base de conhecimento e materiais no pr\'oprio site tanto de t\'opicos b\'asicos, como por exemplo um guia de configura\c{c}\~ao do ambiente, at\'e mais avan\c{c}ados, como a documenta\c{c}\~ao de cada componente da plataforma, que pode ser considerado suficiente para qualquer um que tenha interesse em aprender a desenvolver aplicativos para \textit{Android} consiga fazer o mesmo. É bem verdade que em alguns assuntos a documenta\c{c}\~ao \'e um pouco confusa ou peca pela falta de exemplos mais concretos de implementa\c{c}\~ao, mas, como dito na se\c{c}\~ao \ref{revisao}, f\'oruns e sites na internet existem em grandes quantidades com outras pessoas com dúvidas similares ou aproximadamente iguais, e a maoria com solu\c{c}\~oes para tais empecilhos. Um problema recorrente nisso \'e talvez a falta de uma solu\c{c}\~ao única, para um mesmo problema podem existir n solu\c{c}\~oes diferentes, o que exige muita an\'alise e testes para descobrir quais, ou qual, \'e a mais adequada para o problema encontrado.
+
+Isso era comum de se encontrar tanto para problemas de interfaces, como por exemplo como fazer uma imagem caber dentro de um bot\~ao, como para problemas de \textit{back-end}, como por exemplo qual a melhor abordagem para implementar \textit{Fragments} em elementos do \textit{layout}.
+
+Apesar disso considero que a plataforma apresenta uma dificuldade m\'edia de aprendizado, alguns elementos s\~ao de f\'acil assimila\c{c}\~ao ao passo que alguns exigem um pouco mais de estudo e pesquisa para se entender o que precisa ser feito para atingir o resultado esperado. As interfaces s\~ao mais f\'aceis de compreender como se desenvolver do que como prograrmar os controles que gerenciam o funcionamento da aplica\c{c}\~ao.
+
+Considero que \'e poss\'ivel sim aprender sozinho o suficiente para criar um aplicativo simples usando as informa\c{c}\~oes que se encontra nas documenta\c{c}oes oficiais e nas literaturas sobre o assunto, mas para projetos de larga escala acredito ser dif\'icil de conseguir o resultado desejado apenas com esses recursos.
+
+Quanto ao segundo objetivo, mantenho o que foi dissertado na sub-se\c{c}\~ao \ref{dev} em rela\c{c}\~ao ao desenvolvimento das mesmas, uma das premissas era que as interfaces do aplicativo fossem de f\'acil usablidade, com isso em foco, considerei mais prudente n\~ao precisar fazer nada que fosse apenas visualmente mais atraente mas de d\'ificil asssimi\c{c}\~ao e foquei em pensar na solu\c{c}\~ao que fosse de mais f\'acil compreens\~ao qual a\c{c}\~ao deveria ser tomada em cada umas das interfaces. É claro que sem a primeira parte do aprendizado esta etapa teria possu\'ido uma dificuldade exrememamente maior de ser realizada, j\'a que ao mesmo tempo seria necess\'ario entender o funcionamento e desenvolver os componentes nas interfaces.
+
+Uma futura possibilidade que poderia ser considerada como uma extens\~ao desse trabalho seria tentar adaptar o aplicativo usando a linguagem \textit{Kotlin}. Recentemente os respons\'aveis pelo \textit{Android} anunciaram que a plataforma passaria a oferecer suporte para a linguagem \cite{kotlin:and_adopt}. O site da \textit{Wired} publicou um artigo em que diz que a linguagem \'e a nova tendência no Vale do Sil\'icio e que passaremos a ver cada vez mais aplicativos desenvolvidos nela \cite{kotlin:wired}.
+
+Para este trabalho em espec\'ifico o \textit{Kotlin} entrou mais como uma curiosidade, j\'a que o foco dele era desenvolvimento em \textit{Android} puro, por\'em foi algo que despertou grande curiosidade em explorar essa nova linguagem e medir a diferen\c{c}a do tempo de aprendizagem e implementa\c{c}\~ao de um aplicativo usando cada uma das linguagens.
 %Final do doc
 \newpage
 \section*{Refer\^encias Bibliogr\'aficas}

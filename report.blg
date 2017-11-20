@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report.aux
 The style file: unsrt.bst
 Database file #1: helper.bib
-You've used 10 entries,
+Warning--I didn't find a database entry for "kotlin:and_adopt"
+You've used 11 entries,
             1791 wiz_defined-function locations,
-            488 strings with 4984 characters,
-and the built_in function-call counts, 1392 in all, are:
-= -- 121
-> -- 44
+            494 strings with 5242 characters,
+and the built_in function-call counts, 1526 in all, are:
+= -- 133
+> -- 48
 < -- 0
-+ -- 21
-- -- 11
++ -- 23
+- -- 12
 * -- 7
-:= -- 226
-add.period$ -- 39
-call.type$ -- 10
-change.case$ -- 9
+:= -- 247
+add.period$ -- 43
+call.type$ -- 11
+change.case$ -- 10
 chr.to.int$ -- 0
-cite$ -- 10
-duplicate$ -- 55
-empty$ -- 182
-format.name$ -- 11
-if$ -- 328
+cite$ -- 11
+duplicate$ -- 60
+empty$ -- 200
+format.name$ -- 12
+if$ -- 360
 int.to.chr$ -- 0
-int.to.str$ -- 10
+int.to.str$ -- 11
 missing$ -- 2
-newline$ -- 62
-num.names$ -- 10
-pop$ -- 70
+newline$ -- 68
+num.names$ -- 11
+pop$ -- 77
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 20
+skip$ -- 22
 stack$ -- 0
 substring$ -- 0
-swap$ -- 10
+swap$ -- 11
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 10
-width$ -- 12
-write$ -- 111
+while$ -- 11
+width$ -- 13
+write$ -- 122
+(There was 1 warning)
