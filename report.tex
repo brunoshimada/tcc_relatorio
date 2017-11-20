@@ -19,6 +19,8 @@
 
 \usepackage{listings}
 
+\usepackage[titletoc,title]{appendix}
+\usepackage{bookmark}
 \makeatletter
 \renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
 \makeatother
@@ -442,4 +444,19 @@ Reusabilidade porque elas s\~ao apenas referenciadas no c\'odigo, qualquer mudan
 \renewcommand\refname{}
 \bibliography{helper}
 \bibliographystyle{unsrt}
+\newpage
+\appendix
+\renewcommand\thefigure{\thesection.\arabic{figure}}
+\setcounter{figure}{0} 
+\begin{appendices}
+	\section{Fluxo do aplicativo}
+	Aqui ser\'a descrito o funcionamento do aplicativo
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.2]{int:confirm_confirm}
+		\caption{sample}
+		\label{sample}
+	\end{figure}
+\end{appendices}
 \end{document}
