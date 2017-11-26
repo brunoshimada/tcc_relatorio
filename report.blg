@@ -4,45 +4,45 @@ The top-level auxiliary file: report.aux
 The style file: unsrt.bst
 Database file #1: helper.bib
 Warning--I didn't find a database entry for "kotlin:and_adopt"
-You've used 11 entries,
+You've used 12 entries,
             1791 wiz_defined-function locations,
-            494 strings with 5242 characters,
-and the built_in function-call counts, 1526 in all, are:
-= -- 133
-> -- 48
+            499 strings with 5521 characters,
+and the built_in function-call counts, 1717 in all, are:
+= -- 146
+> -- 65
 < -- 0
-+ -- 23
-- -- 12
-* -- 7
-:= -- 247
-add.period$ -- 43
-call.type$ -- 11
-change.case$ -- 10
++ -- 29
+- -- 17
+* -- 16
+:= -- 280
+add.period$ -- 47
+call.type$ -- 12
+change.case$ -- 11
 chr.to.int$ -- 0
-cite$ -- 11
-duplicate$ -- 60
-empty$ -- 200
-format.name$ -- 12
-if$ -- 360
+cite$ -- 12
+duplicate$ -- 65
+empty$ -- 218
+format.name$ -- 17
+if$ -- 402
 int.to.chr$ -- 0
-int.to.str$ -- 11
+int.to.str$ -- 12
 missing$ -- 2
-newline$ -- 68
-num.names$ -- 11
-pop$ -- 77
+newline$ -- 74
+num.names$ -- 12
+pop$ -- 84
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 22
+skip$ -- 24
 stack$ -- 0
 substring$ -- 0
-swap$ -- 11
+swap$ -- 12
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 11
-width$ -- 13
-write$ -- 122
+while$ -- 12
+width$ -- 14
+write$ -- 133
 (There was 1 warning)

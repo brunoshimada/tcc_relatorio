@@ -15,12 +15,26 @@ Paula~L. HERNANDEZ-VERME and Ruy A.~Valdes .BENAVIDES.
   \url{http://eujournal.org/index.php/esj/article/download/1264/1273}.
 \newblock Acesso em 9 de ago.2017.
 
+\bibitem{stanford}
+Stacy KAUFMAN, Abhinav RAMANI, Dave LUCIANO, Long ZOU, and James FOSCO.
+\newblock \textbf{Micropayments: {A} {V}iable {B}usiness {M}odel?}
+\newblock Dispon\'ivel em:
+  \url{http://cs.stanford.edu/people/eroberts/cs201/projects/2010-11/MicropaymentsAndTheNet/}.
+\newblock Acesso em 10 de ago.2017.
+
 \bibitem{anddev}
 Android Developers.
 \newblock \textbf{Getting {S}tarted}.
 \newblock Dispon\'ivel em:
   \url{https://developer.android.com/training/index.html}.
 \newblock Acesso em 21 de ago.2017.
+
+\bibitem{androidhw}
+Google.
+\newblock Building {Y}our {F}irst {A}pp.
+\newblock Dispon\'ivel em:
+  \url{https://developer.android.com/training/basics/firstapp/index.html}.
+\newblock Primeiro acesso em 21 de ago.2017.
 
 \bibitem{andppe}
 Kyle MEW.
@@ -58,13 +72,6 @@ Google.
 \newblock {C}olor {T}ool - {M}aterial {D}esgin.
 \newblock Dispon\'ivel em: \url{https://material.io/color/}.
 \newblock Primeiro acesso em 15 de set.2017.
-
-\bibitem{androidhw}
-Google.
-\newblock Building {Y}our {F}irst {A}pp.
-\newblock Dispon\'ivel em:
-  \url{https://developer.android.com/training/basics/firstapp/index.html}.
-\newblock Primeiro acesso em 21 de ago.2017.
 
 \bibitem{kotlin:wired}
 Klint FINLEY.
