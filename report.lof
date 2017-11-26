@@ -6,8 +6,14 @@
 \select@language {brazil}
 \select@language {brazil}
 \contentsline {figure}{\numberline {1}{\ignorespaces \'Icone usado para simbolizar a a\c {c}\~ao de pagamento\relax }}{6}{figure.caption.5}
-\contentsline {figure}{\numberline {2}{\ignorespaces Interfaces do aplicativo do tutorial\relax }}{11}{figure.caption.6}
-\contentsline {figure}{\numberline {3}{\ignorespaces Interfaces do aplicativo \textit {mock}\relax }}{13}{figure.caption.7}
-\contentsline {figure}{\numberline {4}{\ignorespaces Exemplo de uso do \textit {Fragment} do \textit {DatePicker}\relax }}{15}{figure.caption.8}
-\contentsline {figure}{\numberline {5}{\ignorespaces Confirma\c {c}\~ao dos dados de uma transa\c {c}\~ao\relax }}{17}{figure.caption.9}
-\contentsline {figure}{\numberline {A.1}{\ignorespaces sample\relax }}{24}{figure.caption.12}
+\contentsline {figure}{\numberline {2}{\ignorespaces Interface de cadastro de usu\'ario'\relax }}{10}{figure.caption.6}
+\contentsline {figure}{\numberline {3}{\ignorespaces Demonstra\c {c}\~ao do uso de \textit {hint} e preenchimento de campo com atributo \textit {textPassword}\relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {4}{\ignorespaces Interface principal do aplicativo\relax }}{12}{figure.caption.8}
+\contentsline {figure}{\numberline {5}{\ignorespaces Demonstra\c {c}\~ao do uso do \textit {Spinner}\relax }}{13}{figure.caption.9}
+\contentsline {figure}{\numberline {6}{\ignorespaces Interface do recebente aguardando contato por \textit {Bluetooth}\relax }}{14}{figure.caption.10}
+\contentsline {figure}{\numberline {7}{\ignorespaces Interfaces de confirma\c {c}\~ao de pagamento\relax }}{15}{figure.caption.11}
+\contentsline {figure}{\numberline {8}{\ignorespaces Interfaces do aplicativo do tutorial\relax }}{16}{figure.caption.12}
+\contentsline {figure}{\numberline {9}{\ignorespaces Interfaces do aplicativo \textit {mock}\relax }}{18}{figure.caption.13}
+\contentsline {figure}{\numberline {10}{\ignorespaces Exemplo de uso do \textit {Fragment} do \textit {DatePicker}\relax }}{20}{figure.caption.14}
+\contentsline {figure}{\numberline {11}{\ignorespaces Confirma\c {c}\~ao dos dados de uma transa\c {c}\~ao\relax }}{22}{figure.caption.15}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces sample\relax }}{29}{figure.caption.18}

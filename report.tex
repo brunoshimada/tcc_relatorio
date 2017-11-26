@@ -301,17 +301,86 @@ Foram definidas inicialmente para o trabalho o desenho de 4 interfaces, \textit{
 
 Para o desenvolvimento das interfaces foi levantado duas abordagens diferentes, o uso de \textit{RelativeLayout} ou o uso do \textit{ConstraintLayout}, ambas alternativas foram testadas para mensurar as possibilidades e dificuldades que cada uma apresentava, por fim foi escolhido seguir o desenvolvimento usando o primeiro. A vantagem no uso do \textit{Relative Layout} \'e poder declarar a posi\c{c}\~ao dos componentes de acordo com seus parentes ou seus irm\~aos, ele d\'a um maior controle sobre os itens no \textit{layout}. Por exemplo, temos uma \textit{view} que define uma \'area retangular na interface, e dentro dessa \'area precisam estar 3 outros componentes, vamos dizer bot\~oes, e esses 3 componentes precisam estar alinhados à direita da \'area. Com o \textit{RelativeLayout} declaramos a \'area, o primeiro bot\~ao alinhado a direita da \'area, e cada um dos bot\~oes subsequentes um abaixo do outro, com a \textit{ConstraintLayout} o mesmo processo precisa que algumas propriedades a mais sejam usadas para obter o mesmo resultado.
 
-A primeira interface a ser feita foi a de cadastro de us\'ario (referencia a imagem). No fluxo de execu\c{c}\~ao normal, essa interface \'e a primeira, por\'em ela deve ocorrer apenas uma vez no momento que o usu\'ario vai se cadastrar, se o usu\'ario j\'a fez o cadastro essa tela n\~ao volta a ser exibida sendo exibida no seu lugar a interface de \textit{login} (referencia a imagem).
+A primeira interface a ser feita foi a de cadastro de us\'ario (imagem \ref{cadastro}). No fluxo de execu\c{c}\~ao normal, essa interface \'e a primeira, por\'em ela deve ocorrer apenas uma vez no momento que o usu\'ario vai se cadastrar, se o usu\'ario j\'a fez o cadastro essa tela n\~ao volta a ser exibida sendo exibida no seu lugar a interface de \textit{login} (imagem \ref{login}).
 
-Para a interface de cadastro (referencia a imagem) foram necess\'arios avaliar e estudar a implementa\c{c}\~ao de três tipos de componentes: \textit{EditText}, \textit{Button} e \textit{ImageView}, os três componentes n\~ao apresentaram grande dificuldade em assimilar o comportamento e o que deveria ser feito para aplicar na interface.
-
-O componente \textit{EditText}, simplificadamente, permite que o usu\'ario insira caract\'eres na interface para serem interpretados pela aplica\c{c}\~ao. Na interface eram necess\'arios que o usu\'ario entrasse com duas \textit{strings}, uma para que ele definisse qual o nome de usu\'ario e outra para a senha. A de entrada do nome de usu\'ario foi mais direta a aplica\c{c}\~ao, a entrada de \textit{strings} \'e um componente padr\~ao que n\~ao precisou de muita configura\c{c}\~ao, a de senha era necess\'ario aplicar uma m\'ascara que ocultasse os caract\'eres a medida que eles fossem digitados, por quest\~ao de seguran\c{c}a e privacidade, o efeito desejado foi facilmente obtido apenas atribuindo o valor \textit{textPassword} na propriedade \textit{InputType}, essa propriedade \'e a que controla, nesse caso, se deve ser aplicado uma m\'ascara de senha, ou como ser\'a visto mais a frente, se o teclado de entrada deve exibir apenas n\'umeros ou n\'umeros e letras.
+Para a interface de cadastro (imagem \ref{cadastro}) foram necess\'arios avaliar e estudar a implementa\c{c}\~ao de três tipos de componentes: \textit{EditText}, \textit{Button} e \textit{ImageView}, os três componentes n\~ao apresentaram grande dificuldade em assimilar o comportamento e o que deveria ser feito para aplicar na interface.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{cadastro} 
+	\caption{Interface de cadastro de usu\'ario'}
+	\label{cadastro}
+\end{figure}
+O componente \textit{EditText}, simplificadamente, permite que o usu\'ario insira caract\'eres na interface para serem interpretados pela aplica\c{c}\~ao. Na interface eram necess\'arios que o usu\'ario entrasse com duas \textit{strings}, uma para que ele definisse qual o nome de usu\'ario e outra para a senha. A de entrada do nome de usu\'ario foi mais direta a aplica\c{c}\~ao, a entrada de \textit{strings} \'e um componente padr\~ao que n\~ao precisou de muita configura\c{c}\~ao, a de senha era necess\'ario aplicar uma m\'ascara que ocultasse os caract\'eres a medida que eles fossem digitados, por quest\~ao de seguran\c{c}a e privacidade, o efeito desejado foi facilmente obtido apenas atribuindo o valor \textit{textPassword} na propriedade \textit{InputType} (exemplo na imagem \ref{login_pass}), essa propriedade \'e a que controla, nesse caso, se deve ser aplicado uma m\'ascara de senha, ou como ser\'a visto mais a frente, se o teclado de entrada deve exibir apenas n\'umeros ou n\'umeros e letras.
 
 O componente \textit{Button} e o \textit{ImageView} exigiram menos customiza\c{c}\~ao para serem aplicados, o bot\~ao exigiu apenas que fossem definidos as cores de fundo e de texto que s\~ao exibidos nele, a imagem apenas que fosse indicado qual o caminho e identificador da imagem. Um ponto a ressaltar que encontrei dificuldade foi no posicionamento correto da imagem no \textit{layout}, foi preciso voltar a documenta\c{c}\~ao do \textit{Android} para entender a hierarquia de \textit{views} \cite{viewslay} e entender onde a imagem deveria ser posicionada para apresentar o comportamento esperado.
 
-Em seguida foi feita a interface de \textit{login} (referencia para a imagem), j\'a que ela tamb\'em \'e uma das interfaces de entrada do aplicativo, como explicado acima essa tela ap\'os o usu\'ario se cadastras \'e a primeira que vai ser carregada, ela n\~ao precisou que fosse implementado nenhum componente novo, os usados aqui foram os mesmo da interface de cadastro descritos acima. Uma diferen\c{c}a entre elas \'e que como a única entrada de texto necess\'ario \'e a senha do usu\'ario n\~ao foram usados \textit{TextView} para indicar o que \'e para ser iserido no campo, em seu lugar foi usado a propriedade \textit{hint} que, como o nome indica, exibe uma dica para o usu\'ario do que deve ser colocado no campo, e desaparece quando o usu\'ario clica nele.
+A interface de \textit{login}(imagem \ref{login}), j\'a que ela tamb\'em \'e uma das interfaces de entrada do aplicativo, como já explicado essa tela ap\'os o usu\'ario se cadastras \'e a primeira que vai ser carregada, ela n\~ao precisou que fosse implementado nenhum componente novo, os usados aqui foram os mesmo da interface de cadastro descritos acima. Uma diferen\c{c}a entre elas \'e que como a única entrada de texto necess\'ario \'e a senha do usu\'ario n\~ao foram usados \textit{TextView} para indicar o que \'e para ser iserido no campo, em seu lugar foi usado a propriedade \textit{hint} que, como o nome indica, exibe uma dica para o usu\'ario do que deve ser colocado no campo, e desaparece quando o usu\'ario clica nele.
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{login} 
+		\caption{Interface de \textit{login} do aplicativo}
+		\label{login}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{login_pass}
+		\caption{Campo de senha preenchido}
+		\label{login_pass}
+	\end{subfigure}
+	\caption{Demonstra\c{c}\~ao do uso de \textit{hint} e preenchimento de campo com atributo \textit{textPassword}}
+	\label{pass}
+\end{figure}
 
-% end new block
+A interface principal do aplicativo \'e de onde o usu\'ario pode selecionar qual a\c{c}\~ao ele deseja tomar, se ele deseja fazer um micropagamento, se quer receber, fazer uma carga de cr\'editos ou encerrar a sess\~ao, todas essas a\c{c}\~oes foram mapeadas para bot\~oes dispostos em formatos de blocos. Nessa interface foram adicionados \'icones nos bot\~oes para simbolizar cada uma das a\c{c}\~oes, como por um exemplo a imagem de um cart\~ao \ref{icon_pay} para indicar que \'e um micropagamento a ser efetuado. Nenhum componente diferente dos citados at\'e agora foi usado nesse momento. O ponto de aten\c{c}\~ao nesse tela foi tomar cuidado com o identificador que foi atribu\'ido para cada um dos bot\~oes, j\'a que no \textit{back-end} os m\'etodos que disparam cada a\c{c}\~ao buscam por esse identificador, um nome colocado errado em alguma das pontas pode ocasionar que a a\c{c}\~ao~desejada n\~ao seja disparada ou que outra seja ativada no seu lugar. Dito isso a interface pode ser vista na imagem \ref{main}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{main} 
+	\caption{Interface principal do aplicativo}
+	\label{main}
+\end{figure}
+
+A principal a\c{c}\~ao do aplicativo \'e a de efetuar um micropagamento, o fluxo de pagamento envolve dois usu\'arios e 4 interfaces no caso de sucesso, a de sele\c{c}\~ao de cedente, confirma\c{c}\~ao de transa\c{c}\~ao do lado do pagante, aguardando conex\~ao e confirma\c{c}\~ao de transa\c{c}\~ao do lado do recebente.
+Iniciando pelo lado do pagante, como j\'a dito s\~ao duas interfaces, a primeira o usu\'ario efetuando o pagamento vai selecionar numa lista, obtida com base nos usu\'arios com quem ele j\'a pareou o aparelho, e confirmar ou cancelar a transa\c{c}\~ao. Na interface de sele\c{c}\~ao foi usado o componente \textit{Spinner}, ele  \'e um componente que permite selecionar um valor de uma lista de op\c{c}\~oes poss\'iveis, quando n\~ao selecionado ele assume um valor padr\~ao pr\'e-definido, quando selecionado ele exibe em uma lista todos os valores dispon\'iveis, quando um valor \'e selecionado ele fica exibido onde previamente estava o valor padr\~ao. Este comportamento pode ser observado na imagem \ref{spinner}, está exemplificado o componente selecionado (imagem \ref{spinner_on}) e como ele fica após um valor ter sido selecionado (imagem \ref{spinner_sel})
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{spinner_on} 
+		\caption{\textit{Spinner} selecionado}
+		\label{spinner_on}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{spinner_selected}
+		\caption{Valor selecionado no \textit{Spinner}}
+		\label{spinner_sel}
+	\end{subfigure}
+	\caption{Demonstra\c{c}\~ao do uso do \textit{Spinner}}
+	\label{spinner}
+\end{figure}
+Na interface \'e necess\'ario apenas adicionar o elemento \textit{\textless{Spinner}\textgreater} no c\'odigo, com suas respectivas propriedades, e na parte do controlador \'e preciso sobreescrever os m\'etodos que definem o que deve ser feito quando o usu\'ario seleciona um item e o que deve ser feito se nada for selecionado.
+
+Do lado do recebente é exibida a interface que indica que está aguardando a conexão \textit{Bluetooth} do pagante, é exibido o logo do \textit{Bluetooth} junto com uma mensagem informando ao usuário o que o aplicativo está executando, no caso aguardando o sinal do outro \textit{smartphone}, é importante oferecer um \textit{feedback} para o usuário para ele entender que a aplicação não está travada ou que parou de funcionar. Esta interface está disponível na imagem \ref{bt}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{wait_bt} 
+	\caption{Interface do recebente aguardando contato por \textit{Bluetooth}}
+	\label{bt}
+\end{figure}
+A interface de confirma\c{c}\~ao do pagamento que existe nos dois lados do pagamento \'e a mesma, alterando apenas a mensagem que \'e exibida para o usu\'ario, do lado do pagante \'e carregada mensagem \textbf{"Pagamento efetuado"} (imagem \ref{pay_p}), enquanto que no recebente \'e exibida a mensagem \textbf{Recebido} (imagem \ref{pay_r}). É renderizado tamb\'em um \'icone de "finaliza\c{c}\~ao" (\textit{done} no reposit\'orio de \'icones do \textit{Android} \cite{materialicon}), os dois componentes mais um bot\~ao para retornar ao menu inicial s\~ao exibidos dentro de um \textit{RelativeLayout} que assume o formato de uma caixa
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{pay_ok} 
+		\caption{Confirma\c{c}\~ao do lado do pagante}
+		\label{pay_p}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{pay_receive}
+		\caption{Confirma\c{c}\~ao do lado do recebente}
+		\label{pay_r}
+	\end{subfigure}
+	\caption{Interfaces de confirma\c{c}\~ao de pagamento}
+	\label{pay}
+\end{figure}
+% end new block% end new block% end new block
+% end new block% end new block% end new block
+% end new block% end new block% end new block
 Um dos objetivos espec\'ificos para esse projeto era aprender desenvolvimento para a plataforma \textit{Android}. At\'e o in\'icio do projeto eu nunca havia tido contato com o desenvolvimento para \textit{Android}, ent\~ao o primeiro passo foi ir atr\'as de material sobre o mesmo, o ponto inicial para isso assumi que seria o site oficial da plataforma, isso por experiências passadas de estudo onde a p\'agina de alguma linguagem, \textit{framework}, etc, em grande partes dos casos possuia uma boa documenta\c{c}\~ao sobre a mesma. A p\'agina da plataforma do \textit{Android} felizmente seguia essa linha, e na mesma encontrei as informa\c{c}\~oes necess\'arias para dar in\'icio no aprendizado.
 
 Ap\'os a configura\c{c}\~ao do ambiente, instalando \textit{Java} e a \textit{IDE} apenas, segui o tutorial \cite{androidhw} que explica como criar um aplicativo b\'asico (imagem \ref{hw}) para testar as configura\c{c}\~oes locais. O resultado \'e um aplicativo com duas \textit{Activities} (interfaces), a primeira (imagem \ref*{hw_message}) possui uma \textit{EditText} para escrever uma mensagem e um bot\~ao que chama a pr\'oxima \textit{Activity}, a segunda (imagem \ref*{hw_result}) \textit{Activity} apenas exibe a mensagem escrita.
