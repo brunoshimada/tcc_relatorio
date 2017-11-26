@@ -378,179 +378,40 @@ A interface de confirma\c{c}\~ao do pagamento que existe nos dois lados do pagam
 	\caption{Interfaces de confirma\c{c}\~ao de pagamento}
 	\label{pay}
 \end{figure}
+
+A outra a\c{c}\~ao desenvolvida foi a de carregamento, envolve duas interfaces (imagem \ref{charge_s}, uma principal onde s\~ao consultados os valores dispon\'iveis, e \'e poss\'ivel selecionar o quanto ser\'a carregado no aplicativo \ref{charge}, al\'em da tela de confirma\c{c}\~ao da a\c{c}\~ao. Na interface de carregamento foi usado uma propriedade diferente no campo \textit{EditText}, como \'e um campo em que ser\'a inserido úm valor monet\'ario \'e esperado que sejam inseridos apenas números no campo, para for\c{c}ar que apenas números sejam exibidos para o usu\'ario preencher no campo foi usado o valor \textit{"number"} no atributo \textit{InputType}, esse comportamento pode ser verificado na imagem \ref{charge_numbers}. Na interface existem tamb\'em mais dois bot\~oes que n\~ao exigiram nenhuma configura\c{c}\~ao especial para atingirem o efeito desejado.
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{charge_on} 
+		\caption{Interface de carregamento}
+		\label{charge}
+	\end{subfigure}
+	\begin{subfigure}{0.5\textwidth}
+		\includegraphics[scale=0.3]{charge}
+		\caption{Teclado apenas com op\c{c}\~oes de números}
+		\label{charge_numbers}
+	\end{subfigure}
+	\caption{Interfaces de carregamento de valores}
+	\label{charge_s}
+\end{figure}
+
+Infelizmente at\'e o encerramento do trabalho a plataforma de servi\c{c}os ainda estava apresentando erro no momento de confirma\c{c}\~ao do carregamento, por esse motivo n\~ao foi poss\'ivel em tempo de execu\c{c}\~ao obter as imagens de confirma\c{c}\~ao da aplica\c{c}\~ao.
+
+Isto porque as mensagens de confirma\c{c}\~ao e erro,etc, s\~ao uma cole\c{c}\~ao de 3 interfaces que s\~ao usadas dinamicamente ao longo do aplicativo, mudando apenas o texto que \'e carregado dependendo de cada contexto que essas interfaces s\~ao carregadas para serem exibidas, um exemplo do uso delas pode ser visto nas imagens \ref{pay_p}, \ref{pay_r} e \ref{bt}. As mensagens de erro n\~ao foram descritas em detalhes por conta da implementa\c{c}\~ao que foi feita, mas como exemplo, temos a mensagem de erro exibida caso o usu\'ario entre com a senha errada, \'e carregada no \textit{template} um \'icone simbolizando que \'e preciso aten\c{c}\~ao, e a mensagem explicando o motivo da aten\c{c}\~ao, no caso a senha que foi colocada de forma incorreta, este exemplo pode ser visto na imagem \ref{error}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.3]{error} 
+	\caption{Alerta de erro}
+	\label{error}
+\end{figure}
 % end new block% end new block% end new block
 % end new block% end new block% end new block
 % end new block% end new block% end new block
-Um dos objetivos espec\'ificos para esse projeto era aprender desenvolvimento para a plataforma \textit{Android}. At\'e o in\'icio do projeto eu nunca havia tido contato com o desenvolvimento para \textit{Android}, ent\~ao o primeiro passo foi ir atr\'as de material sobre o mesmo, o ponto inicial para isso assumi que seria o site oficial da plataforma, isso por experiências passadas de estudo onde a p\'agina de alguma linguagem, \textit{framework}, etc, em grande partes dos casos possuia uma boa documenta\c{c}\~ao sobre a mesma. A p\'agina da plataforma do \textit{Android} felizmente seguia essa linha, e na mesma encontrei as informa\c{c}\~oes necess\'arias para dar in\'icio no aprendizado.
-
-Ap\'os a configura\c{c}\~ao do ambiente, instalando \textit{Java} e a \textit{IDE} apenas, segui o tutorial \cite{androidhw} que explica como criar um aplicativo b\'asico (imagem \ref{hw}) para testar as configura\c{c}\~oes locais. O resultado \'e um aplicativo com duas \textit{Activities} (interfaces), a primeira (imagem \ref*{hw_message}) possui uma \textit{EditText} para escrever uma mensagem e um bot\~ao que chama a pr\'oxima \textit{Activity}, a segunda (imagem \ref*{hw_result}) \textit{Activity} apenas exibe a mensagem escrita.
-%inserir as imagens da primeira e segunda tela
-\begin{figure}[H]
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{hw_message} 
-		\caption{Interface do aplicativo que\\\hspace{\textwidth}recebe um texto e envia para a \\\hspace{\textwidth}pr\'oxima interface}
-		\label{hw_message}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{hw_result}
-		\caption{Interface que exibe a mensagem\\\hspace{\textwidth}da \textit{Activity} anterior\\\hspace{\textwidth}}
-		\label{hw_result}
-	\end{subfigure}
-	\caption{Interfaces do aplicativo do tutorial}
-	\label{hw}
-\end{figure}
-
-Apesar de ser um exemplo um tanto trivial, ele engloba alguns aspectos importantes do \textit{Android}:
-\begin{itemize}
-	\item Cria\c{c}\~ao de interface
-	\item Cria\c{c}\~ao de componentes para a interface
-	\item Uso de \textit{intents} para trafego de dados entre as interfaces
-	\item Procurar, extrair e exibir textos nas interfaces a partir do ID
-\end{itemize}
-
-Ap\'os o contato inicial com a plataforma e o desenvolvimento do aplicativo acima, fui em uma busca de mais material e comecei a ler o livro \textbf{"\textit{{Android}} 5 Programming by Example"} \cite{andppe}. Com o conhecimento sobre micropagamentos, o livro citado e os guias, todos indicados na se\c{c}\~ao \ref{revisao}, iniciei o desenvolvimento de um aplicativo que simulasse um micropagamento, o aplicativo era totalmente \textit{offline} e apenas fazia um \textit{mock} de servi\c{c}o de transa\c{c}\~oes.
-
-Para o aplicativo tentei imaginar qual o m\'inimo de interfaces que precisaria para simular o uso do aplicativo por um usu\'ario que queria executar uma transa\c{c}\~ao, e cheguei as seguintes interfaces:
-\begin{enumerate}
-	\item \label{int:login}Interface de acesso, com espa\c{c}o para o usu\'ario colocar o seu login, a senha, um bot\~ao de confirma\c{c}\~ao e o logo do aplicativo
-	\item \label{int:main_list}Interface principal do aplicativo com as a\c{c}\~oes que o usu\'ario pode fazer mapeadas em bot\~oes
-	\item \label{int:pay}Interface de pagamento onde o usu\'ario preenche quem \'e o destinat\'ario, o valor, a data e confirma
-	\item \label{int:confirm}Interface de confirma\c{c}\~ao da transa\c{c}\~ao
-\end{enumerate}
-Essas interfaces foram decididas como as principais para desenvolver e testar o conceito de micropagamento em uma escala absurdamente menor, em um ambiente controlado apenas para validar id\'eias e testar conceitos novos no desenvolvimento de interfaces para \textit{Android}.
-
-A interface de \textit{login} (item \ref{int:login}) foi a primeira a ser desenvolvida, \'e a interface mais simples do aplicativo. Os pontos novos do aprendizado nessa interface foram inserir uma imagem na tela e colocar um campo texto do tipo senha, em que os caract\'eres aparecem como asterisco a medida que s\~ao digitados. A interface por fim est\'a ilustrada na imagem \ref{int:login_img}.
-
-A interface principal (item \ref{int:main_list}) do aplicatvo foi a segunda, o ponto novo aplicado nessa interface foi a inclus\~ao de \'icones dentro de um \textit{Button}. A interface est\'a ilustrada na imagem \ref{int:main}.
-\begin{figure}[H]
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{int:login}
-		\caption{Interface de \textit{login}\\\hspace{\textwidth}\\\hspace{\textwidth}}
-		\label{int:login_img}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{int:main}
-		\caption{Interface principal do aplicativo\\\hspace{\textwidth}com as a\c{c}\~oes permitidas ao\\\hspace{\textwidth}usu\'ario mapeadas como bot\~oes}
-		\label{int:main}
-	\end{subfigure}
-	\caption{Interfaces do aplicativo \textit{mock}}
-	\label{loginmain}
-\end{figure}
-
-A interface de pagamentos (item \ref{int:pay}) \'e a que considerei a mais interessante de se fazer, ela possui dois elementos visuais que demandaram grande esfor\c{c}o para entender o funcionamento e a aplica\c{c}\~ao, um deles \'e um calend\'ario para selecionar datas e o outro \'e uma barra deslizante que de acordo com a posi\c{c}\~ao define qual o valor da transa\c{c}\~ao.
-
-Dentre os dois o que gerou maior dificuldade para ser feito foi o calend\'ario, o \textit{Android} fornece um DatePicker padr\~ao, por\'em ele n\~ao se adequava a implementa\c{c}\~ao desejada, o que busquei fazer para o funcionamento dele era que ao clicar em um campo de entrada de texto comum, abrisse um calend\'ario para que o usu\'ario escolhesse a data e ao finalizar fechasse o calend\'aro novamente.
-
-Para atingir esse efeito foi necess\'ario criar um Fragment que implementasse o DatePicker padr\~ao do \textit{Android}, foi sobreescrito o m\'etodo de onCreate para que ao criar o Fragment retornasse um DatePicker com a data atual. A implementa\c{c}\~ao do Fragment pode ser vista na \textit{listing} \ref{datepicker}.
-\newpage
-\begin{lstlisting}[language=Java, caption=\textit{Fragment} do calend\'ario, captionpos=b, breaklines=true, label=datepicker]
-public class DatePickerFragment extends DialogFragment implements DatePickerDialog.OnDateSetListener{
-	@Override
-	public Dialog onCreateDialog(Bundle savedInstanceState) {
-		final Calendar calendar = Calendar.getInstance();
-		int year = calendar.get(Calendar.YEAR);
-		int month = calendar.get(Calendar.MONTH);
-		int day = calendar.get(Calendar.DAY_OF_MONTH);
-		return new DatePickerDialog(getActivity(), (TransactionActivity)getActivity(), year,month,day);
-	}
-\end{lstlisting}
-No c\'odigo de controle da \textit{Activity} foi preciso adicionar um \textit{listener} no campo texto que fica aguardando um 'clique', quando \'e clicado, chama uma fun\c{c}\~ao que instancia o \textit{Fragment} e exibe na interface, ainda nesse controle foi criada uma fun\c{c}\~ao que atribui ao campo do calend\'ario a data selecionada, essa fun\c{c}\~ao \'e sobreescrita de uma definida na mesma classe do \textit{Fragment} do \textit{DatePicker} (ver \textit{listing} \ref{datepicker}).
-
-Um exemplo de como o \textit{Fragment} \'e carregado e renderizado na tela pode ser visto na imagem \ref{main_calendar}. A imagem \ref{int:main_nocal} mostra a interface ao ser carregada, nesse momento o \textit{listener} est\'a aguardando um 'clique' na \'area de texto ao lado de \textbf{Escolha uma data} para carregar o calendário. A imagem \ref{int:main_cal} mostra o \textit{Fragment} carregado na interface.
-\begin{figure}[H]
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{int:main_nocal}
-		\caption{\textit{DatePicker} n\~ao\\\hspace{\textwidth}selecionado}
-		\label{int:main_nocal}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{int:main_cal}
-		\caption{\textit{Fragment} do \textit{DatePicker} \\\hspace{\textwidth}carregado}
-		\label{int:main_cal}
-	\end{subfigure}
-	\caption{Exemplo de uso do \textit{Fragment} do \textit{DatePicker}}
-	\label{main_calendar}
-\end{figure}
-
-Para o outro componente, a barra deslizante chamada de \textit{SeekBar}, a implementa\c{c}\~ao exigiu menos codifica\c{c}\~ao, n\~ao foi necess\'ario criar classes adicionais como feito no \textit{DatePicker} (\textit{listing} \ref{datepicker}), j\'a que o componente padr\~ao atendia as necessidades da interface, o que precisou ser codificado foi implementar um \textit{listener} na barra para detectar movimentos nela e sobrepor 3 m\'etodos padr\~oes que definem as a\c{c}\~oes de in\'icio, fim e mudan\c{c}a de status. A de \'inicio n\~ao faz nada, apenas \'e instanciada para definir a barra, a de mudan\c{c}a de status pega o valor de onde a barra parou e atribui \`a uma var\'iavel e a final \'e encarregada de atualizar o campo texto com o valor atual selecionado. A implementa\c{c}\~ao pode ser vista na \textit{listing} \ref{seekbar}.
-\newpage
-\begin{lstlisting}[language=Java, caption=\textit{SeekBar} do valor, captionpos=b, breaklines=true, label=seekbar]
-SeekBar seekbar = (SeekBar) findViewById(R.id.seekBar);
-seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-	int actual_value = 0;
-	@Override
-	public void onProgressChanged(SeekBar seekBar, int new_value, boolean b) {
-		actual_value = new_value;
-	}
-	@Override
-	public void onStartTrackingTouch(SeekBar seekBar) {
-	}
-	@Override
-	public void onStopTrackingTouch(SeekBar seekBar) {
-		TextView transferValue = (TextView) findViewById(R.id.rvalueTransfer);
-		transferValue.setText(Integer.toString(actual_value);
-	}
-});
-\end{lstlisting}
-
-A última interface, \'e a de confirma\c{c}\~ao do pagamento (item \ref{int:confirm}), \'e uma tela simples que apenas carrega as informa\c{c}\~oes inseridas na interface anterior (ver imagem \ref{int:main_nocal}) para confirma\c{c}\~ao e execu\c{c}\~ao, lembrando que execu\c{c}\~ao no contexto atual \'e uma simula\c{c}\~ao, do pagamento. Essa interface n\~ao teve nenhum desenvolvimento expressivo j\'a que ela usa elementos, nesse ponto do aprendizado, b\'asicos, como campos textos carregando informa\c{c}\~oes vindos da leitura da \textit{Intent} que transportou os dados de uma \textit{Activity} para outra.
-
-\begin{figure}[H]
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{int:pay}
-		\caption{Interface com todas as\\\hspace{\textwidth}informa\c{c}\~oes preenchidas}
-		\label{int:pay_img}
-	\end{subfigure}
-	\begin{subfigure}{0.5\textwidth}
-		\includegraphics[scale=0.5]{int:confirm}
-		\caption{Interface de confirma\c{c}\~ao com\\\hspace{\textwidth}os dados preenchidos na \ref{int:pay_img}}
-		\label{int:confirm}
-	\end{subfigure}
-	\caption{Confirma\c{c}\~ao dos dados de uma transa\c{c}\~ao}
-	\label{pay_composite}
-\end{figure}
-
-Ap\'os o desenvolvimento desses dois aplicativos considerei ter adquirido um conhecimento suficiente para prosseguir e dar início ao desenvolvimento da interface do aplicativo alvo deste trabalho. \'E claro que passei por um n\'umero pequeno de componentes que o \textit{Android} possui, existem diversos outros \textit{Fragments} que executam diferentes tarefas de diferentes formas visuais, além de muitos outros componentes que at\'e o momento da finaliza\c{c}\~ao desse aplicativo n\~ao vi como necess\'arios para este desenvolvimento em espec\'ifico.
-
 \subsection{Desenvolvimento das interfaces do aplicativo} \label{dev}
 
 Finalizada a etapa de aprendizado em \textit{Android}, dei in\'icio ao segundo objetivo do trabalho que consistia em desenhar as interfaces do aplicativo de micropagamentos operando sobre uma base de servi\c{c}os funcional. O primeiro passo foi a familiariza\c{c}\~ao com a plataforma, entender o fluxo de execu\c{c}\~ao, os triggers, os listeners, estudar literalmente a plataforma inteira, nessa parte contei com a colabora\c{c}\~ao do \textbf{Henrique Leme}, desenvolvedor da plataforma, com o aux\'ilio dele essa parte foi facilitada permitindo que a assimila\c{c}\~ao do conteúdo fosse mais flu\'ida.
 
 Passada essa parte foi definido que o desenvolvimento seria principalmente no diret\'orio \textit{res}, na estrutura de um projeto \textit{Android}, nesse diret\'orio ficam todos os arquivos relacionados a parte visual do aplicativo, as interfaces, os \'icones, as imagens, defini\c{c}\~oes de estilos, \textit{Strings}, etc. Tamb\'em foi preciso em alguns pontos fazer modifica\c{c}\~oes no \textit{MainActivity}, j\'a que algumas interfaces precisaram ser mapeadas e algumas a\c{c}\~oes foram reescritas para atender o novo formato no \textit{layout}.
-
-Uma mudan\c{c}a substancial no desenvolvimento dessas interfaces foi o uso do \textit{Relative Layout} ao inv\'es do \textit{Constraint Layout} que foi usado nos dois aplicativos descritos na sub-se\c{c}\~ao \ref{learn}. Durante a execu\c{c}\~ao dos dois aplicativos anteriores esse detalhe passou desapercebido durante o desenvolvimento, o que ocasionou um certo volume de trabalho para estabelecer a posi\c{c}\~ao de cada componente na tela. A vantagem no uso do \textit{Relative Layout} \'e poder declarar a posi\c{c}\~ao dos componentes de acordo com seus parentes ou seus irm\~aos, ele d\'a um maior controle sobre os itens no \textit{layout}. Por exemplo, temos uma \textit{view} que define uma \'area retangular na interface, e dentro dessa \'area precisam estar 3 outros componentes, vamos dizer bot\~oes, e esses 3 componentes precisam estar alinhados à direita da \'area. Com o \textit{Relative Layout} declaramos a \'area, o primeiro bot\~ao alinhado a direita da \'area, e cada um dos bot\~oes subsequentes um abaixo do outro, o c\'odigo para esta ilustrado na \textit{listing} \ref{relative}.
-\begin{lstlisting}[language=XML, caption=\textit{Exemplo de uso de um \textit{RelativeLayout}}, captionpos=b, breaklines=true, label=relative]
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:paddingLeft="16dp"
-	android:paddingRight="16dp">
-	<Button
-		android:id = "@+id/box1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentLeft="true"
-		android:text="button1" />
-	<Button
-		android:id = "@+id/box2"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/box1"
-		android:layout_alignParentLeft="true"
-		android:text="button2" />
-	<Button
-		android:id = "@+id/box3"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/box2"
-		android:layout_alignParentLeft="true"
-		android:text="button3" />
-</RelativeLayout>
-\end{lstlisting}
-A exce\c{c}\~ao do aprendizado do \textit{Relative Layout} n\~ao houve grandes dificuldades no desenvolvimento das interfaces visto que a maior parte deles foi escrita usando bot\~oes e campos textos para carregar as informa\c{c}\~oes. De componentes e t\'ecnincas n\~ao vistos na etapa de arendizado foram utilizados o \textit{Spinner}, e a declara\c{c}\~ao de todas as \textit{Strings} em um arquivo \textit{XML} \`a parte.
-
-O \textit{Spinner} \'e um componente que permite selecionar um valor de uma lista de op\c{c}\~oes poss\'iveis, quando n\~ao selecionado ele assume um valor padr\~ao pr\'e-definido, quando selecionado ele exibe em uma lista todos os valores dispon\'iveis, quando um valor \'e selecionado ele fica exibido onde previamente estava o valor padr\~ao. No aplicativo essa lista \'e obtida de outros dispostivos que foram pareados por bluetooth com o do usu\'ario.
-Na interface \'e necess\'ario apenas adicionar o elemento \textit{\textless{Spinner}\textgreater} no c\'odigo, com suas respectivas propriedades, e na parte do controlador \'e preciso sobreescrever os m\'etodos que definem o que deve ser feito quando o usu\'ario seleciona um item e o que deve ser feito se nada for selecionado.
 
 A segunda mudan\c{c}a foi o uso de um arquivo \textit{XML} para armazenar todas as \textit{Strings} usadas no aplicativo. As vantagens dessa abordagem, ao contr\'ario de escrever manualmente todas elas diretamente, \'e a flexibilidade e a reusabilidade.
 
