@@ -50,7 +50,7 @@
 	{\Large\bfseries Desenvolvimento de aplicativo para micropagamentos na plataforma Android\par}
 	\vfill
 	\begin{flushright}
-		\hspace{5cm}Relat\'orio parcial apresentado \`a Escola de Artes,
+		\hspace{7cm}Relat\'orio parcial apresentado \`a Escola de Artes,
 	
 		\hspace{7cm}Ci\^encias e Humanidades, da Universidade de S\~ao
 	
@@ -187,49 +187,60 @@ Dentre as solu\c{c}\~oes que existem atualmente, a \textit{Investopedia} d\'a fo
 	\item A plataforma agindo com cr\'editos. Cada usu\'ario cria sua conta no plataforma, cada um deles compra/recarrega a quantia desejada que deseja ter como cr\'edito, a cada transa\c{c}\~ao entre duas partes a plataforma se encarrega de atualizar os cr\'editos de ambas as partes.
 \end{itemize}
 O grande problema na \'area de micropagamentos s\~ao as taxas cobradas pelas operadoras de cart\~ao de cr\'edito, meio que a maioria dos modelos existentes como demonstrado acima usa como forma preferencial de pagamento o cart\~ao cr\'edito, por\'em \'e sabido que para cada transa\c{c}\~ao s\~ao cobradas taxas em cima do valor pago, \'e um caso raro mas podem existir situa\c{c}\~oes que as taxas podem, porque n\~ao, superar o valor da transa\c{c}\~ao, o que para um cliente que seja dono de um neg\'ocio, torna-se algo insustent\'avel.
+
+Uma plataforma de micropagamentos tamb\'em pode se aplicar ao mundo offline como uma forma de currência que substitua o dinheiro padr\~ao em pequenas comunidades.
+
+Imagine por exemplo o ambiente de um condom\'inio privado que ofer\c{c}a servi\c{c}os internos para os condôminos, a forma natural que se imagina que as transa\c{c}\~oes v\~ao ocorrer nesse meio \'e por forma de dinheiro em esp\'ecie, o que levanta alguns riscos para essa popula\c{c}\~ao, sabendo que nessa ambiente circula dinheiro vivo, e que a seguran\c{c}a \'e alguns n\'iveis mais baixa que a comum, alguma pessoa mal intencionada pode pensar em levar vantagem e cometer um assalto contra os prestadores desse servi\c{c}o visando roubar o dinheiro que fica acumulado.
+
+Com o uso de uma plataforma de micropagamentos os condôminos poderiam fazer a carga de uma quantia de dinheiro digital em um aplicativo, os prestadores de servi\c{c}o aceitarem essa forma de pagamento, e a pessoa fazer a transa\c{c}\~ao usando esse dinheiro digital, isso faz com que n\~ao circule dinheiro vivo no ambiente deles, o dinheiro est\'a circulando, por\'em ele est\'a externo ao ambiente, ele n\~ao pode ser acessado de uma maneira f\'isica naquele local o que pode ajudar a inibir pessoas que pensem em roubar o condom\'inio j\'a que n\~ao haveria dinheiro f\'isico no local.
+
+Essa mesma abordagem pode ser aplicada para por exemplo, o restaurante universit\'ario da nossa faculdade. Ao inveś de pagar a carga do cart\~ao com o dinheiro f\'isico, os alunos poderiam fazer isso com um aplicativo, efetuando a carga de cr\'editos com um cart\~ao de cr\'edito por exemplo e pagando na entrada com o seu celular e a funcion\'aria do restaurante com o celular da empresa respons\'avel recebendo os pagamentos.
 \newpage
 \section{Objetivos}
 
 
 \subsection{Objetivo Geral}
-O objetivo do trabalho foi desenvolver um aplicativo \textit{Android} que conseguisse efetuar transa\c{c}\~oes monet\'arias entre duas pessoas usando o celular, com uma interface simples de usar.
+O objetivo do trabalho foi desenvolver um aplicativo \textit{Android} que conseguisse efetuar micropagamentos entre \textit{smarthphones}.
 \newline
 
 
 \subsection{Objetivos Espec\'ificos}
 Os objetivos espec\'ificos do trabalho foram:
 \begin{itemize}
-	\item Aprendizagem em programa\c{c}\~ao para \textit{Android}
-	\item Desenvolver a \textit{UI} do aplicativo com base em uma plataforma de servi\c{c}os e infraestrutura existente
 	\item Aprendizagem do conceito de micropagamentos
+	\item Estudo da bibliografia de artigos de micropagamentos.
+	\item Desenvolver a \textit{UI} do aplicativo 
+	\item Integrar a interface com base em uma plataforma de servi\c{c}os e infraestrutura existente.
 \end{itemize}
 \newpage
 \section{Revis\~ao Bibliogr\'afica} \label{revisao}
 Ao longo do desenvolvimento do aplicativo, em diversos momentos apareceram d\'uvidas que n\~ao conseguiam ser resolvidas por for\c{c}a bruta, como por exemplo, como definir a posi\c{c}\~ao fixa de um bot\~ao em rela\c{c}\~ao a outros no mesmo layout? D\'uvidas desde as mais simples, que surgem principalmente nos momentos iniciais de aprendizado de alguma linguagem ou \textit{framework} novo, at\'e as mais complexas, quando j\'a se tem uma base s\'olida de conhecimento sobre o t\'opico, s\~ao comuns no meio da tecnologia, fato que pode ser comprovado fazendo uma simples busca no \textit{Google}, nas p\'aginas de resultado \'e comum encontrar pessoas com a mesma d\'uvida, em variados f\'oruns, blogs e  sites diversos. O mais interessante nesse ponto \'e a tamb\'em a variedade de abordagens diferentes que s\~ao poss\'iveis de encontrar para uma mesma d\'uvida, fazendo com que tenhamos que filtrar dentre elas a que melhor se aplica ao contexto do nosso problema.
 
-
 Abaixo est\~ao listadas as fontes consultadas ao longo do trabalho que ajudaram em diversos momentos do desenvolvimento.
-\newline
 
-Para entendimento do conceito de micropagamentos foram usadas duas fontes principais:
-\begin{itemize}
-	%link pagina da investopedia
-\item A p\'agina do termo \cite{invest} no site da \textit{Investopedia} que deu uma vis\~ao geral sobre o assunto, enfocando primeiro em um resumo simplificado para depois se aprofundar um pouco mais nele. O interessante desse site \'e que a partir do termo \textit{"micropayment"}, ele busca termos relacionados buscando fazer uma trilha de informa\c{c}\~oes para abranger o assunto.
-%link do livro
-\item A segunda fonte foi o artigo \textbf{\textit{"Virtual currencies, micropaymentes and the payments systems: a challenge to fiat money and monetary policy?"}} \cite{microp} que discorre n\~ao s\'o sobre o conceito de micropagamentos como tamb\'em aborda o tema das moedas virtuais e relaciona ambos. O artigo foca mais na parte de como os micropagamentos s\~ao mais relevantes no mundo online na compra de itens que eles classificam como microprodutos, fazem uma compara\c{c}\~ao das transa\c{c}\~oes online que envolvem produtos f\'isicos e digitais. Esse artigo considero como o principal usado j\'a que ele aborda de uma maneira mais aprofundada o ambiente que os micropagamentos se inserem.
-\end{itemize}
+Para entendimento do conceito de micropagamentos foram usadas duas fontes principais.
+
+A p\'agina do termo \cite{invest} no site da \textit{Investopedia} que deu uma vis\~ao geral sobre o assunto, enfocando primeiro em um resumo simplificado para depois se aprofundar um pouco mais nele. O interessante desse site \'e que a partir do termo \textit{"micropayment"}, ele busca termos relacionados buscando fazer uma trilha de informa\c{c}\~oes para abranger o assunto.
+
+Outra fonte consultada foi o artigo \textbf{\textit{"Virtual currencies, micropaymentes and the payments systems: a challenge to fiat money and monetary policy?"}} \cite{microp} que discorre n\~ao s\'o sobre o conceito de micropagamentos como tamb\'em aborda o tema das moedas virtuais e relaciona ambos. O artigo foca mais na parte de como os micropagamentos s\~ao mais relevantes no mundo online na compra de itens que eles classificam como microprodutos, fazem uma compara\c{c}\~ao das transa\c{c}\~oes online que envolvem produtos f\'isicos e digitais. Esse artigo considero como o principal usado j\'a que ele aborda de uma maneira mais aprofundada o ambiente que os micropagamentos se inserem.
+
+O artigo \textbf{\textit{"Micropayments: A Viable Business Model?"}} apresenta um ponto interessante nas quest\~oes sobre os desafios t\'ecnicos que uma aplica\c{c}\~ao de micropagamentos teria que se preocupar em atender para desenvolver uma aplica\c{c}\~ao segura. Os autores listam 5 pontos que consideram serem desafios que precisam ser vencidos para uma implementa\c{c}\~ao bem-sucedida, seguran\c{c}a, escalabilidade, confiabilidade, interoperabilidade e anonimidade.
+
+Seguran\c{c}a \'e um requisito necess\'ario para praticamente qualquer aplicativo, por\'em quando tal aplica\c{c}\~ao envolve dinheiro e transa\c{c}\~oes ele se torna um problema de alta prioridade de ser resolvido, ter um aplicativo inseguro que apresente muitas falhas, e entre elas as que sujeitam o aplicativo a sofrer ataques que comprometam as informa\c{c}\~oes e dados de usu\'arios, podem fazer a confian\c{c}a nele cair, o que reduz a base de usu\'arios. Os autores nesse item que durante o desenvolvimento \'e preciso tomar aten\c{c}\~ao com autentica\c{c}\~ao, autoriza\c{c}\~ao, integridade de informa\c{c}\~ao e confidencialidade.
+
+Arquitetar o sitema de uma maneira que permita que ela seja escal\'avel \'e um requisito necess\'ario para poder lidar com um pontencial aumento do número de acessos a aplica\c{c}\~ao. O desenho da solu\c{c}\~ao deve ser de tal forma que seja poss\'ivel acoplar mais servidores a medida que foram necess\'arios para poder lidar com o tr\'afego de informa\c{c}\~oes.
+
+É levantado tamb\'em a quest\~ao de interoperabilidade, permitir que diferentes aplica\c{c}\~oes de micropagamentos conversem entre si, este talvez seja o ponto de maior dificuldade de se atingir. Aplica\c{c}\~oes diferentes possuem diferentes meios de tratar a informa\c{c}\~ao que chega, sai, e processada nele.
 
 % link do training para android
 No come\c{c}o do projeto meu conhecimento de programa\c{c}\~ao para \textit{Android} era nulo, durante a prepara\c{c}\~ao da m\'aquina encontrei no mesmo site que disponibiliza a \textit{IDE} para desenvolvimento, uma sub-se\c{c}\~ao intitulada \textit{Training}, debaixo da se\c{c}\~ao \textit{Develop} \cite{anddev}. Nela encontrei uma s\'erie de li\c{c}\~oes b\'asicas para quem est\'a come\c{c}ando a desenvolver para \textit{Android}. Foi \'util para ter uma no\c{c}\~ao b\'asica de onde come\c{c}ar e os termos espec\'ificos usados.
-\newline
 
-Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o guia do site da \textit{Android}, fui atr\'as de mais algum material para criar um aplicativo e aprofundar um pouco mais o conhecimento na plataforma. O livro \cite{andppe} utilizado nesse momento foi \textbf{\textit{"Android 5 Programming by Example"}}, o livro \cite{andppe} se aprofunda um pouco mais nos exerc\'icios ajudando e servindo de guia para criar um aplicativo mais robusto do que o visto no guia do site da \textit{Android}. O livro \cite{andppe} foi usado de guia no segundo passo do projeto onde criei um aplicativo \textit{mock} que simulava localmente uma transa\c{c}\~ao nos moldes de um micropagamento de um aparelho para um servidor, para testar os conhecimentos e novas t\'ecnincas adquiridas. Apesar do livro \cite{andppe} focar mais na vers\~ao \textit{Lollipop}, lan\c{c}ada em 2015 mesmo ano da publica\c{c}\~ao do livro, grande parte dos componentes n\~ao mudou muito para a vers\~ao mais atual.
-\newline
+Ap\'os a cria\c{c}\~ao de um aplicativo \textit{Hello World} b\'asico seguindo o guia \cite{androidhw} do site da \textit{Android}, fui atr\'as de mais algum material para criar um aplicativo e aprofundar um pouco mais o conhecimento na plataforma. O livro \cite{andppe} utilizado nesse momento foi \textbf{\textit{"Android 5 Programming by Example"}}, o livro \cite{andppe} se aprofunda um pouco mais nos exerc\'icios ajudando e servindo de guia para criar um aplicativo mais robusto do que o visto no guia do site da \textit{Android}. O livro \cite{andppe} foi usado de guia no segundo passo do projeto onde criei um aplicativo \textit{mock} que simulava localmente uma transa\c{c}\~ao nos moldes de um micropagamento de um aparelho para um servidor, para testar os conhecimentos e novas t\'ecnincas adquiridas. Apesar do livro \cite{andppe} focar mais na vers\~ao \textit{Lollipop}, lan\c{c}ada em 2015 mesmo ano da publica\c{c}\~ao do livro, grande parte dos componentes n\~ao mudou muito para a vers\~ao mais atual.
 
 
-Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina \cite{material} que foi muita usada como fonte de consulta e guia \'e a \textit{Material Design}. Nela foi poss\'ivel encontrar orienta\c{c}\~oes e guias de como desenhar a interface para se encaixar no padr\~ao do \textit{Material Design}. Dentre as ferramentas e guias dispon\'iveis os que se destacam pelo seu uso e importância no projeto foram as seguintes:
-\begin{itemize}
-	\item \textbf{\textit{Material Icons}} \cite{materialicon} - Uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone da figura \ref{icon_pay} que foi usado para simbolizar a a\c{c}\~ao de pagamento:
+Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina \cite{material} que foi muita usada como fonte de consulta e guia \'e a \textit{Material Design}. Nela foi poss\'ivel encontrar orienta\c{c}\~oes e guias de como desenhar a interface para se encaixar no padr\~ao do \textit{Material Design}. A seguir s\~ao descritas as ferramentas e guias dispon\'iveis que se destacam pelo seu uso e importância no projeto.
+
+A p\'agina \textbf{\textit{Material Icons}} \cite{materialicon} \'e uma esp\'ecie de repos\'itorio da \textit{Google} com v\'arios \'icones dispon\'iveis para uso. Todos s\~ao liberados para uso sobre a licen\c{c}a \textit{Apache License Version 2.0}. Os \'icones s\~ao desenhados de maneira simples e de f\'acil interpreta\c{c}\~ao, o design deles \'e de uma maneira que quando se olha para o \'icone \'e f\'acil deduzir qual seu significado. Por exemplo o \'icone da figura \ref{icon_pay} que foi usado para simbolizar a a\c{c}\~ao de pagamento:
 	% (inserir \'icone do pagamento)
 	\begin{figure}[h]
 		\centering
@@ -237,11 +248,11 @@ Durante a elabora\c{c}\~ao do rascunho das interfaces do aplicativo uma p\'agina
 		\caption{\'Icone usado para simbolizar a a\c{c}\~ao de pagamento}
 		\label{icon_pay}
 	\end{figure}
-	
+
 	Al\'em da p\'agina com o rep\'ositorio dos \'icones, o design e o conceito dos itens \'e explicado no artigo \textbf{\textit{Style - Icons}} \cite{materialiconguide}
 	
-	\item \textbf{\textit{Material Colors}} \cite{materialcolors} - Uma ferramenta \cite{materialcolorpallete} que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e \textbf{\textit{Style - Colors}} \cite{materialcolors} onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
-\end{itemize}
+A p\'agina \textbf{\textit{Material Colors}} \cite{materialcolors} possui uma ferramenta \cite{materialcolorpallete} que ajuda na escolha da paleta de cores que v\~ao compor o aplicativo, ele oferece tamb\'em um guia visual de como ficam as cores nas interfaces do sistema. Outro artigo relacionado \'e \textbf{\textit{Style - Colors}} \cite{materialcolors} onde \'e explicado as boas pr\'aticas e guias para selecionar as cores dos componentes da interface do aplicativo.
+
 \newpage
 \section{Metodologia}
 Desenvolver a interface de um aplicativo \textit{Android} com base numa plataforma de servi\c{c}os existentes buscando fazer a mesma ser simples, no sentido de ter uma f\'acil utiliza\c{c}\~ao, buscando obedecer e seguir os guias definidos pelo \textit{Android} como boas pr\'aticas e que atendem e se adequam a filosofia do \textit{Material Design}.
