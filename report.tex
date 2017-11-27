@@ -62,6 +62,8 @@
 	
 		\hspace{7cm}Bacharel em Sistemas de Informa\c{c}\~ao.
 		\bfseries Orientador: Prof. Dr. Luciano Vieira de Ara\'ujo
+		
+		Modalidade: TCC curto (1 semestre) - individual
 	\end{flushright}
 	\vspace{2cm}
 	{\Large S\~ao Paulo\par}
@@ -109,7 +111,25 @@
 \selectlanguage{brazil}
 \section*{\centering{Agradecimentos}}
 \pagenumbering{roman}
-section
+Agrade\c{c}o \`a todos que me incentivaram, deram suporte e n\~ao me deixaram desistir ao longo do caminho trilhado na faculdade. Agrade\c{c}o aos meus pais pelo apoio e incentivo de buscar entrar na USP, agrade\c{c}o aos colegas que me ajudaram em momentos de dificuldade, agrade\c{c}o aos amigos que nunca me abandoram e sempre estiveram ao meu lado, agrade\c{c}o a toda comunidade da EACH que me ajudaram a crescer como ind\'ividuo permitindo ver que a vida \'e muito mais do que imaginamos e conhecemos. Agrade\c{c}o ao corpo docente da EACH, tanto da \'area de Sistemas de Informa\c{c}\~ao como os de outras \'areas conhecids durante o Ciclo B\'asico. Agrade\c{c}o ao Prof. Dr. Luciano Vieira de Araújo por me orientar neste trabalho, agrade\c{c}o ao Henrique Leme, desenvolvedor principal da plataforma de servi\c{c}os usada, pelo apoio durante o desenvolvimento das interfaces e integra\c{c}\~oes.
+\newpage
+\selectlanguage{brazil}
+\section*{\centering{Gloss\'ario}}
+
+
+\hspace{0.5cm}\textbf{Android}: Sistema operacional \textit{open source} baseado em \textit{Linux} desenvolvido pela \textit{Google} para uso em \textit{smartphones} e \textit{tablets}.
+\newline
+
+\textbf{\textit{UI}}: \textit{User Interface} é a interface entre o usuário e o sistema na qual o usuário tem controle sobre as ações executadas.
+\newline
+
+\textbf{\textit{Material Design}}: Uma linguagem de design desenvolvida pela \textit{Google} que visa servir como guia para o desenvolvimento de interfaces.
+\newline
+
+\textbf{\textit{Java}}: Linguagem de programação desenvolvida sob licença \textit{GNU} e desenvolvida pela \textit{Sun Microsystems}, e mantida pela \textit{Oracle}
+\newline
+
+\textbf{\textit{XML}}: Linguagem de marcação composto por uma sequência de pares atributo e valor, de fácil interpretação pela máquina e por humanos.
 \newpage
 \selectlanguage{brazil}
 \section*{\centering{Resumo}}
@@ -223,14 +243,14 @@ O artigo \textbf{\textit{"Micropayments: A Viable Business Model?"}} \cite{stanf
 
 Seguran\c{c}a \'e um requisito necess\'ario para praticamente qualquer aplicativo, por\'em quando tal aplica\c{c}\~ao envolve dinheiro e transa\c{c}\~oes ele se torna um problema de alta prioridade de ser resolvido, ter um aplicativo inseguro que apresente muitas falhas, e entre elas as que sujeitam o aplicativo a sofrer ataques que comprometam as informa\c{c}\~oes e dados de usu\'arios, podem fazer a confian\c{c}a nele cair, o que reduz a base de usu\'arios. Os autores nesse item que durante o desenvolvimento \'e preciso tomar aten\c{c}\~ao com autentica\c{c}\~ao, autoriza\c{c}\~ao, integridade de informa\c{c}\~ao e confidencialidade.
 
-Arquitetar o sitema de uma maneira que permita que ela seja escal\'avel \'e um requisito necess\'ario para poder lidar com um pontencial aumento do número de acessos a aplica\c{c}\~ao. O desenho da solu\c{c}\~ao deve ser de tal forma que seja poss\'ivel acoplar mais servidores a medida que foram necess\'arios para poder lidar com o tr\'afego de informa\c{c}\~oes.
+Arquitetar o sitema de uma maneira que permita que ela seja escal\'avel \'e um requisito necess\'ario para poder lidar com um pontencial aumento do n\'umero de acessos a aplica\c{c}\~ao. O desenho da solu\c{c}\~ao deve ser de tal forma que seja poss\'ivel acoplar mais servidores a medida que foram necess\'arios para poder lidar com o tr\'afego de informa\c{c}\~oes.
 
-É levantado tamb\'em a quest\~ao de interoperabilidade, permitir que diferentes aplica\c{c}\~oes de micropagamentos conversem entre si, este talvez seja o ponto de maior dificuldade de se atingir. Aplica\c{c}\~oes diferentes possuem diferentes meios de tratar a informa\c{c}\~ao que chega, sai, e processada nele.
+\'E levantado tamb\'em a quest\~ao de interoperabilidade, permitir que diferentes aplica\c{c}\~oes de micropagamentos conversem entre si, este talvez seja o ponto de maior dificuldade de se atingir. Aplica\c{c}\~oes diferentes possuem diferentes meios de tratar a informa\c{c}\~ao que chega, sai, e processada nele.
 
 
 A quest\~ao da anonimidade \'e tratado como um ponto complicado de se definir, at\'e que ponto a anonimidade deve existir a a partir de que ponto \'e necess\'ario saber a identididade dos usu\'arios, quanto um usu\'ario pode e deve saber do outro, quest\~oes que valem para os dois atores envolvidos em um micropagamento. O artigo n\~ao levanta nennhuma resposta definitiva sobre o assunto, ele apresenta bons argumentos a favor e contra a quantidade de anonimidade no sistema.
 
-Um dos exemplos \'e explorado \'e o registro de hist\'orico de transa\c{c}\~oes, para um usu\'ario que faz o pagamento \'e uma informa\c{c}\~ao útil de ser acessada, mas que precisa de uma pequena fra\c{c}\~ao de depriva\c{c}\~ao de anonimidade. Mas ao mesmo tempo \'e informa\c{c}\~ao que pode ser usada por terceiros para descobrir padr\~oes de consumo e o que foi consumido, e que pode ser usado contra o usu\'ario. Um \textit{e-commerce} por exemplo, com base nessas informa\c{c}\~oes pode manipular os pre\c{c}os e anúncios que tem potencial de ser interesse de tal usu\'ario.
+Um dos exemplos \'e explorado \'e o registro de hist\'orico de transa\c{c}\~oes, para um usu\'ario que faz o pagamento \'e uma informa\c{c}\~ao \'util de ser acessada, mas que precisa de uma pequena fra\c{c}\~ao de depriva\c{c}\~ao de anonimidade. Mas ao mesmo tempo \'e informa\c{c}\~ao que pode ser usada por terceiros para descobrir padr\~oes de consumo e o que foi consumido, e que pode ser usado contra o usu\'ario. Um \textit{e-commerce} por exemplo, com base nessas informa\c{c}\~oes pode manipular os pre\c{c}os e an\'uncios que tem potencial de ser interesse de tal usu\'ario.
 % link do training para android
 
 No come\c{c}o do projeto meu conhecimento de programa\c{c}\~ao para \textit{Android} era nulo, durante a prepara\c{c}\~ao da m\'aquina encontrei no mesmo site que disponibiliza a \textit{IDE} para desenvolvimento, uma sub-se\c{c}\~ao intitulada \textit{Training}, debaixo da se\c{c}\~ao \textit{Develop} \cite{anddev}. Nela encontrei uma s\'erie de li\c{c}\~oes b\'asicas para quem est\'a come\c{c}ando a desenvolver para \textit{Android}. Foi \'util para ter uma no\c{c}\~ao b\'asica de onde come\c{c}ar e os termos espec\'ificos usados.
@@ -297,7 +317,7 @@ Quanto a \textit{hardware} foram usados um \textit{notebook} pr\'oprio rodando u
 
 \subsection{Desenvolvimento das interfaces} \label{learn}
 % start new block
-Foram definidas inicialmente para o trabalho o desenho de 4 interfaces, \textit{login}, uma tela principal com as a\c{c}\~oes permitidas ao usu\'ario, a tela de efetuar o micropagamento e a tela de confirma\c{c}\~ao do pagamento, ap\'os estudo da estrutra da plataforma de servi\c{c}os e revis\~ao das interfaces, o número de interfaces que seriam necess\'arias ficou em 13. Para cada uma delas ser\'a descrita o que foi feito e os componentes usados.
+Foram definidas inicialmente para o trabalho o desenho de 4 interfaces, \textit{login}, uma tela principal com as a\c{c}\~oes permitidas ao usu\'ario, a tela de efetuar o micropagamento e a tela de confirma\c{c}\~ao do pagamento, ap\'os estudo da estrutra da plataforma de servi\c{c}os e revis\~ao das interfaces, o n\'umero de interfaces que seriam necess\'arias ficou em 13. Para cada uma delas ser\'a descrita o que foi feito e os componentes usados.
 
 Para o desenvolvimento das interfaces foi levantado duas abordagens diferentes, o uso de \textit{RelativeLayout} ou o uso do \textit{ConstraintLayout}, ambas alternativas foram testadas para mensurar as possibilidades e dificuldades que cada uma apresentava, por fim foi escolhido seguir o desenvolvimento usando o primeiro. A vantagem no uso do \textit{Relative Layout} \'e poder declarar a posi\c{c}\~ao dos componentes de acordo com seus parentes ou seus irm\~aos, ele d\'a um maior controle sobre os itens no \textit{layout}. Por exemplo, temos uma \textit{view} que define uma \'area retangular na interface, e dentro dessa \'area precisam estar 3 outros componentes, vamos dizer bot\~oes, e esses 3 componentes precisam estar alinhados à direita da \'area. Com o \textit{RelativeLayout} declaramos a \'area, o primeiro bot\~ao alinhado a direita da \'area, e cada um dos bot\~oes subsequentes um abaixo do outro, com a \textit{ConstraintLayout} o mesmo processo precisa que algumas propriedades a mais sejam usadas para obter o mesmo resultado.
 
@@ -314,7 +334,7 @@ O componente \textit{EditText}, simplificadamente, permite que o usu\'ario insir
 
 O componente \textit{Button} e o \textit{ImageView} exigiram menos customiza\c{c}\~ao para serem aplicados, o bot\~ao exigiu apenas que fossem definidos as cores de fundo e de texto que s\~ao exibidos nele, a imagem apenas que fosse indicado qual o caminho e identificador da imagem. Um ponto a ressaltar que encontrei dificuldade foi no posicionamento correto da imagem no \textit{layout}, foi preciso voltar a documenta\c{c}\~ao do \textit{Android} para entender a hierarquia de \textit{views} \cite{viewslay} e entender onde a imagem deveria ser posicionada para apresentar o comportamento esperado.
 
-A interface de \textit{login}(imagem \ref{login}), j\'a que ela tamb\'em \'e uma das interfaces de entrada do aplicativo, como já explicado essa tela ap\'os o usu\'ario se cadastras \'e a primeira que vai ser carregada, ela n\~ao precisou que fosse implementado nenhum componente novo, os usados aqui foram os mesmo da interface de cadastro descritos acima. Uma diferen\c{c}a entre elas \'e que como a única entrada de texto necess\'ario \'e a senha do usu\'ario n\~ao foram usados \textit{TextView} para indicar o que \'e para ser iserido no campo, em seu lugar foi usado a propriedade \textit{hint} que, como o nome indica, exibe uma dica para o usu\'ario do que deve ser colocado no campo, e desaparece quando o usu\'ario clica nele.
+A interface de \textit{login}(imagem \ref{login}), j\'a que ela tamb\'em \'e uma das interfaces de entrada do aplicativo, como já explicado essa tela ap\'os o usu\'ario se cadastras \'e a primeira que vai ser carregada, ela n\~ao precisou que fosse implementado nenhum componente novo, os usados aqui foram os mesmo da interface de cadastro descritos acima. Uma diferen\c{c}a entre elas \'e que como a \'unica entrada de texto necess\'ario \'e a senha do usu\'ario n\~ao foram usados \textit{TextView} para indicar o que \'e para ser iserido no campo, em seu lugar foi usado a propriedade \textit{hint} que, como o nome indica, exibe uma dica para o usu\'ario do que deve ser colocado no campo, e desaparece quando o usu\'ario clica nele.
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.3]{login} 
@@ -363,7 +383,7 @@ Do lado do recebente é exibida a interface que indica que está aguardando a co
 	\caption{Interface do recebente aguardando contato por \textit{Bluetooth}}
 	\label{bt}
 \end{figure}
-A interface de confirma\c{c}\~ao do pagamento que existe nos dois lados do pagamento \'e a mesma, alterando apenas a mensagem que \'e exibida para o usu\'ario, do lado do pagante \'e carregada mensagem \textbf{"Pagamento efetuado"} (imagem \ref{pay_p}), enquanto que no recebente \'e exibida a mensagem \textbf{Recebido} (imagem \ref{pay_r}). É renderizado tamb\'em um \'icone de "finaliza\c{c}\~ao" (\textit{done} no reposit\'orio de \'icones do \textit{Android} \cite{materialicon}), os dois componentes mais um bot\~ao para retornar ao menu inicial s\~ao exibidos dentro de um \textit{RelativeLayout} que assume o formato de uma caixa
+A interface de confirma\c{c}\~ao do pagamento que existe nos dois lados do pagamento \'e a mesma, alterando apenas a mensagem que \'e exibida para o usu\'ario, do lado do pagante \'e carregada mensagem \textbf{"Pagamento efetuado"} (imagem \ref{pay_p}), enquanto que no recebente \'e exibida a mensagem \textbf{"Recebido"} (imagem \ref{pay_r}). É renderizado tamb\'em um \'icone de "finaliza\c{c}\~ao" (\textit{done} no reposit\'orio de \'icones do \textit{Android} \cite{materialicon}), os dois componentes mais um bot\~ao para retornar ao menu inicial s\~ao exibidos dentro de um \textit{RelativeLayout} que assume o formato de uma caixa
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.3]{pay_ok} 
@@ -379,7 +399,7 @@ A interface de confirma\c{c}\~ao do pagamento que existe nos dois lados do pagam
 	\label{pay}
 \end{figure}
 
-A outra a\c{c}\~ao desenvolvida foi a de carregamento, envolve duas interfaces (imagem \ref{charge_s}, uma principal onde s\~ao consultados os valores dispon\'iveis, e \'e poss\'ivel selecionar o quanto ser\'a carregado no aplicativo \ref{charge}, al\'em da tela de confirma\c{c}\~ao da a\c{c}\~ao. Na interface de carregamento foi usado uma propriedade diferente no campo \textit{EditText}, como \'e um campo em que ser\'a inserido úm valor monet\'ario \'e esperado que sejam inseridos apenas números no campo, para for\c{c}ar que apenas números sejam exibidos para o usu\'ario preencher no campo foi usado o valor \textit{"number"} no atributo \textit{InputType}, esse comportamento pode ser verificado na imagem \ref{charge_numbers}. Na interface existem tamb\'em mais dois bot\~oes que n\~ao exigiram nenhuma configura\c{c}\~ao especial para atingirem o efeito desejado.
+A outra a\c{c}\~ao desenvolvida foi a de carregamento, envolve duas interfaces (imagem \ref{charge_s}, uma principal onde s\~ao consultados os valores dispon\'iveis, e \'e poss\'ivel selecionar o quanto ser\'a carregado no aplicativo \ref{charge}, al\'em da tela de confirma\c{c}\~ao da a\c{c}\~ao. Na interface de carregamento foi usado uma propriedade diferente no campo \textit{EditText}, como \'e um campo em que ser\'a inserido um valor monet\'ario \'e esperado que sejam inseridos apenas n\'umeros no campo, para for\c{c}ar que apenas n\'umeros sejam exibidos para o usu\'ario preencher no campo foi usado o valor \textit{"number"} no atributo \textit{InputType}, esse comportamento pode ser verificado na imagem \ref{charge_numbers}. Na interface existem tamb\'em mais dois bot\~oes que n\~ao exigiram nenhuma configura\c{c}\~ao especial para atingirem o efeito desejado.
 \begin{figure}[H]
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.3]{charge_on} 
@@ -388,7 +408,7 @@ A outra a\c{c}\~ao desenvolvida foi a de carregamento, envolve duas interfaces (
 	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[scale=0.3]{charge}
-		\caption{Teclado apenas com op\c{c}\~oes de números}
+		\caption{Teclado apenas com op\c{c}\~oes de n\'umeros}
 		\label{charge_numbers}
 	\end{subfigure}
 	\caption{Interfaces de carregamento de valores}
@@ -404,24 +424,51 @@ Isto porque as mensagens de confirma\c{c}\~ao e erro,etc, s\~ao uma cole\c{c}\~a
 	\caption{Alerta de erro}
 	\label{error}
 \end{figure}
-% end new block% end new block% end new block
-% end new block% end new block% end new block
-% end new block% end new block% end new block
-\subsection{Desenvolvimento das interfaces do aplicativo} \label{dev}
 
-Finalizada a etapa de aprendizado em \textit{Android}, dei in\'icio ao segundo objetivo do trabalho que consistia em desenhar as interfaces do aplicativo de micropagamentos operando sobre uma base de servi\c{c}os funcional. O primeiro passo foi a familiariza\c{c}\~ao com a plataforma, entender o fluxo de execu\c{c}\~ao, os triggers, os listeners, estudar literalmente a plataforma inteira, nessa parte contei com a colabora\c{c}\~ao do \textbf{Henrique Leme}, desenvolvedor da plataforma, com o aux\'ilio dele essa parte foi facilitada permitindo que a assimila\c{c}\~ao do conteúdo fosse mais flu\'ida.
+Devido ao grande n\'umero de \textit{strings} usadas no aplicativo, foi usado um arquivo \textit{XML} para armazenar todas as usadas no aplicativo. As vantagens dessa abordagem, ao contr\'ario de escrever manualmente todas elas diretamente, \'e a flexibilidade e a reusabilidade.
 
-Passada essa parte foi definido que o desenvolvimento seria principalmente no diret\'orio \textit{res}, na estrutura de um projeto \textit{Android}, nesse diret\'orio ficam todos os arquivos relacionados a parte visual do aplicativo, as interfaces, os \'icones, as imagens, defini\c{c}\~oes de estilos, \textit{Strings}, etc. Tamb\'em foi preciso em alguns pontos fazer modifica\c{c}\~oes no \textit{MainActivity}, j\'a que algumas interfaces precisaram ser mapeadas e algumas a\c{c}\~oes foram reescritas para atender o novo formato no \textit{layout}.
-
-A segunda mudan\c{c}a foi o uso de um arquivo \textit{XML} para armazenar todas as \textit{Strings} usadas no aplicativo. As vantagens dessa abordagem, ao contr\'ario de escrever manualmente todas elas diretamente, \'e a flexibilidade e a reusabilidade.
-
-Flexibilidade pois tendo o arquivo como base \'e poss\'ivel traduzir ele para outros idiomas, como o id das \textit{strings} permanece o mesmo, as mesmas j\'a est\~ao referenciadas no c\'odigo e v\~ao exibir o valor definido. Isto \'e útil para se localizar o aplicativo para outros pa\'ises que usam uma linguagem diferente da que se foi desenvolvido o aplicativo inicialmente.
+Flexibilidade pois tendo o arquivo como base \'e poss\'ivel traduzir ele para outros idiomas, como o id das \textit{strings} permanece o mesmo, as mesmas j\'a est\~ao referenciadas no c\'odigo e v\~ao exibir o valor definido. Isto \'e \'util para se localizar o aplicativo para outros pa\'ises que usam uma linguagem diferente da que se foi desenvolvido o aplicativo inicialmente.
 
 Reusabilidade porque elas s\~ao apenas referenciadas no c\'odigo, qualquer mudan\c{c}a que for feita em um dos valores \'e replicada por todo o aplicativo poupando o trabalho de precisar reescrever todas as ocorrências e correr o risco de esquecer alguma, al\'em da possibilidade de usar uma mesma palavra em diversos elementos do aplicativo sem a necessidade de escrever o mesmo repetidas vezes.
+% end new block% end new block% end new block
+% end new block% end new block% end new block
+% end new block% end new block% end new block
+\subsection{Intergra\c{c}\~ao com a plataforma de servi\c{c}os} \label{dev}
+
+Finalizada a etapa de desenvolvimento das interfaces, dei in\'icio ao segundo objetivo do trabalho que consistia em integrar as interfaces do aplicativo de micropagamento para operar com uma base de servi\c{c}os funcional. O primeiro passo foi a familiariza\c{c}\~ao com a plataforma, entender o fluxo de execu\c{c}\~ao, os triggers, os listeners, estudar literalmente a plataforma inteira, nessa parte contei com a colabora\c{c}\~ao do Henrique Leme, desenvolvedor da plataforma, com o aux\'ilio dele essa parte foi facilitada permitindo que a assimila\c{c}\~ao do conte\'udo fosse mais flu\'ida.
+
+Como as interfaces foram desenhadas j\'a com o conhecimento pr\'evio da base de servi\c{c}os, n\~ao foram encontradas muitas dificuldades para fazer essa integra\c{c}\~ao, j\'a que as interfaces foram feitas com os campos que cada a\c{c}\~ao precisava para ser executada, o risco maior de ter que refazer todas elas foi mitigado.
+
+O ponto principal desse momento do trabalho foi o cuidado de nomear corretamente cada interface desenhada e seus componentes e mapear eles no controlador da aplica\c{c}\~ao. J\'a que como descrito anteriormente isso pode acarretar uma s\'erie de problemas como a\c{c}\~oes indesejadas sendo disparadas no lugar de outras, campos que n\~ao tem seus valores capturados de forma correta, etc.
+
+A estrutura do \textit{back-end} do aplicativo se comporta como ilustrado na imagem \ref{estrut}, a estrutura para funcionar envolvem dois \textit{smartphones} (identificados como "Dipositivos"), um servidor para efetuar e gerenciar as transa\c{c}\~oes dos micropagamentos e um servidor de dados colhendo e armazenando as informa\c{c}\~oes das transa\c{c}\~oes e usu\'arios.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{estrutura} 
+	\caption{Estrutura do \textit{back-end}}
+	\label{estrut}
+\end{figure}
+Os dispositivos conversam entre si usando um conjunto de seis opera\c{c}\~oes:
+\begin{itemize}
+	\item T1 - Um dispositivo A se torna dispon\'ivel para receber um micropagamento
+	\item T2 - Um dispositivo B entra em contato com A para informar que quer fazer o micropagamento
+	\item T3 - O dispositivo A aceita o dispostivo o B
+	\item T4 - O dispositivo B realiza a transa\c{c}\~ao
+	\item T5 - O dispostivo A confirma a transa\c{c}\~ao
+	\item T6 - Existe uma opera\c{c}\~ao de cancelamento que pode ser executada por qualquer uma das duas partes
+\end{itemize}
+Essa opera\c{c}\~oes podem ser vistas no diagrama da imagem \ref{transactions}, onde A \'e o cedente e B \'e o sacado.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{transactions} 
+	\caption{Opera\c{c}\~oes entre dispositivos}
+	\label{transactions}
+\end{figure}
+
 \section{Considera\c{c}\~oes Finais}
 No in\'icio do projeto foram definidos dois objetivos para este trabalho, aprender o desenvolvimento para \textit{Android} e aplicar o conhecimento adquirido para produzir as interfaces de um aplicativo. Sendo o primeiro pr\'e-requisito obrigat\'orio para a execu\c{c}\~ao do segundo, \'e mais prudente discorrer sobre ele de in\'icio.
 
-O desenvolvimento para \textit{Android} conta com uma boa base de conhecimento e materiais no pr\'oprio site tanto de t\'opicos b\'asicos, como por exemplo um guia de configura\c{c}\~ao do ambiente, at\'e mais avan\c{c}ados, como a documenta\c{c}\~ao de cada componente da plataforma, que pode ser considerado suficiente para qualquer um que tenha interesse em aprender a desenvolver aplicativos para \textit{Android} consiga fazer o mesmo. É bem verdade que em alguns assuntos a documenta\c{c}\~ao \'e um pouco confusa ou peca pela falta de exemplos mais concretos de implementa\c{c}\~ao, mas, como dito na se\c{c}\~ao \ref{revisao}, f\'oruns e sites na internet existem em grandes quantidades com outras pessoas com dúvidas similares ou aproximadamente iguais, e a maoria com solu\c{c}\~oes para tais empecilhos. Um problema recorrente nisso \'e talvez a falta de uma solu\c{c}\~ao única, para um mesmo problema podem existir n solu\c{c}\~oes diferentes, o que exige muita an\'alise e testes para descobrir quais, ou qual, \'e a mais adequada para o problema encontrado.
+O desenvolvimento para \textit{Android} conta com uma boa base de conhecimento e materiais no pr\'oprio site tanto de t\'opicos b\'asicos, como por exemplo um guia de configura\c{c}\~ao do ambiente, at\'e mais avan\c{c}ados, como a documenta\c{c}\~ao de cada componente da plataforma, que pode ser considerado suficiente para qualquer um que tenha interesse em aprender a desenvolver aplicativos para \textit{Android} consiga fazer o mesmo. É bem verdade que em alguns assuntos a documenta\c{c}\~ao \'e um pouco confusa ou peca pela falta de exemplos mais concretos de implementa\c{c}\~ao, mas, como dito na se\c{c}\~ao \ref{revisao}, f\'oruns e sites na internet existem em grandes quantidades com outras pessoas com d\'uvidas similares ou aproximadamente iguais, e a maoria com solu\c{c}\~oes para tais empecilhos. Um problema recorrente nisso \'e talvez a falta de uma solu\c{c}\~ao \'unica, para um mesmo problema podem existir n solu\c{c}\~oes diferentes, o que exige muita an\'alise e testes para descobrir quais, ou qual, \'e a mais adequada para o problema encontrado.
 
 Isso era comum de se encontrar tanto para problemas de interfaces, como por exemplo como fazer uma imagem caber dentro de um bot\~ao, como para problemas de \textit{back-end}, como por exemplo qual a melhor abordagem para implementar \textit{Fragments} em elementos do \textit{layout}.
 
@@ -441,19 +488,4 @@ Para este trabalho em espec\'ifico o \textit{Kotlin} entrou mais como uma curios
 \renewcommand\refname{}
 \bibliography{helper}
 \bibliographystyle{unsrt}
-\newpage
-\appendix
-\renewcommand\thefigure{\thesection.\arabic{figure}}
-\setcounter{figure}{0} 
-\begin{appendices}
-	\section{Fluxo do aplicativo}
-	Aqui ser\'a descrito o funcionamento do aplicativo
-	
-	\begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.2]{int:confirm_confirm}
-		\caption{sample}
-		\label{sample}
-	\end{figure}
-\end{appendices}
 \end{document}
